@@ -82,12 +82,12 @@ interface TowerSlot {
                 </p>
                 <p class="text-xs text-slate-500 mt-0.5">Minimal ground footprint</p>
               </div>
-              <div class="bg-white rounded-xl border border-slate-200 p-4">
-                <p class="text-xs text-slate-500">Protection</p>
-                <p class="font-display text-2xl font-bold text-slate-900 mt-0.5">
+              <div class="bg-ocean-mist rounded-xl border border-ocean-line p-4">
+                <p class="text-xs text-slate-600">Protection</p>
+                <p class="font-display text-2xl font-bold text-ocean mt-0.5">
                   Weatherproof
                 </p>
-                <p class="text-xs text-slate-500 mt-0.5">Theft & rain enclosed</p>
+                <p class="text-xs text-slate-600 mt-0.5">Theft & rain enclosed</p>
               </div>
             </div>
 
@@ -107,7 +107,7 @@ interface TowerSlot {
                 type="button"
                 (click)="retrieveBike()"
                 [disabled]="occupiedCount() === 0"
-                class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-slate-800 bg-white hover:bg-slate-100 border border-slate-200 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl transition-colors whitespace-nowrap"
+                class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-slate-800 bg-white hover:bg-mineral border border-slate-200 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl transition-colors whitespace-nowrap"
               >
                 <mat-icon class="!text-[18px] !w-[18px] !h-[18px] leading-none">
                   arrow_downward
@@ -135,8 +135,8 @@ interface TowerSlot {
                 <div
                   [class]="
                     bay.occupied
-                      ? 'flex items-center justify-between px-4 py-3 rounded-xl bg-emerald-50/70 border border-emerald-200 transition-colors'
-                      : 'flex items-center justify-between px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 transition-colors'
+                      ? 'flex items-center justify-between px-4 py-3 rounded-xl bg-seaglass-mist border border-seaglass-line transition-colors'
+                      : 'flex items-center justify-between px-4 py-3 rounded-xl bg-mineral border border-mineral-line transition-colors'
                   "
                 >
                   <div class="flex items-center gap-3">
@@ -159,7 +159,7 @@ interface TowerSlot {
                   <span
                     [class]="
                       bay.occupied
-                        ? 'text-xs font-medium text-emerald-700'
+                        ? 'text-xs font-medium text-seaglass'
                         : 'text-xs text-slate-400'
                     "
                   >
@@ -224,7 +224,7 @@ interface TowerSlot {
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             @for (item of commerce; track item.title) {
-              <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6 space-y-2.5">
+              <div class="bg-pearl rounded-2xl border border-mineral-line p-6 space-y-2.5">
                 <h3 class="font-display text-lg font-semibold text-slate-900">{{ item.title }}</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">{{ item.description }}</p>
               </div>
@@ -235,7 +235,7 @@ interface TowerSlot {
         <!-- Cycle Rickshaws / Bike Cabs -->
         <div class="pt-10 border-t border-slate-200">
           <div class="max-w-2xl mb-10 space-y-2">
-            <p class="text-sm font-medium text-emerald-700">
+            <p class="text-sm font-medium text-seaglass">
               03. Micro-Mobility · Cycle Rickshaws
             </p>
             <h2 class="font-display text-3xl font-bold text-slate-900 tracking-tight">
@@ -299,7 +299,7 @@ interface TowerSlot {
         @if (activeCity() === 'la') {
           <div class="bg-white rounded-2xl border border-slate-200 p-7 sm:p-9 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="space-y-3">
-              <p class="text-xs font-medium text-slate-500">LA Metro Initiative</p>
+              <p class="text-xs font-medium text-ocean">LA Metro Initiative</p>
               <h3 class="font-display text-2xl font-bold text-slate-900">
                 28 Projects by 2028 Games
               </h3>
@@ -310,7 +310,7 @@ interface TowerSlot {
               </p>
             </div>
             <div class="space-y-3 border-t md:border-t-0 md:border-l border-slate-200 pt-5 md:pt-0 md:pl-8">
-              <p class="text-xs font-medium text-slate-500">PeopleForBikes Collaboration</p>
+              <p class="text-xs font-medium text-seaglass">PeopleForBikes Collaboration</p>
               <h3 class="font-display text-2xl font-bold text-slate-900">
                 Building the Future of Biking in Los Angeles
               </h3>
@@ -323,7 +323,7 @@ interface TowerSlot {
         } @else {
           <div class="bg-white rounded-2xl border border-slate-200 p-7 sm:p-9 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="space-y-3">
-              <p class="text-xs font-medium text-slate-500">High-Density Streetscapes</p>
+              <p class="text-xs font-medium text-ocean">High-Density Streetscapes</p>
               <h3 class="font-display text-2xl font-bold text-slate-900">
                 Reclaiming Sidewalks with Vertical Towers
               </h3>
@@ -334,7 +334,7 @@ interface TowerSlot {
               </p>
             </div>
             <div class="space-y-3 border-t md:border-t-0 md:border-l border-slate-200 pt-5 md:pt-0 md:pl-8">
-              <p class="text-xs font-medium text-slate-500">Storefront Vitality</p>
+              <p class="text-xs font-medium text-seaglass">Storefront Vitality</p>
               <h3 class="font-display text-2xl font-bold text-slate-900">
                 Neighborhood Shops & Café Perks
               </h3>

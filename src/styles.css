@@ -1,4 +1,4 @@
-/* Global styles for AshBike — Sunlit Light Mode Editorial Design */
+/* Global styles for AshBike — Crisp Light Mode with Emerald Primary & Coastal Accents */
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import "tailwindcss";
 
@@ -6,6 +6,20 @@
   --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-pearl: #FAF9F6;
+  --color-mineral: #EEF2F4;
+  --color-mineral-line: #D4DEE4;
+
+  --color-ocean: #0B4F78;
+  --color-ocean-deep: #083A59;
+  --color-ocean-mist: #EAF2F7;
+  --color-ocean-line: #BFD6E4;
+
+  --color-seaglass: #1C6E63;
+  --color-seaglass-deep: #15564D;
+  --color-seaglass-mist: #E7F4F1;
+  --color-seaglass-line: #B6DBD4;
 }
 
 @layer base {

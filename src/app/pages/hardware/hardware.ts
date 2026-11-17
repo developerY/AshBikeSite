@@ -67,19 +67,19 @@ type SuspensionMode = 'comfort' | 'sport' | 'off-road';
             </div>
 
             <div class="grid grid-cols-2 gap-4 pt-2">
-              <div class="bg-white rounded-xl border border-slate-200 p-4">
+              <div class="bg-pearl rounded-xl border border-mineral-line p-4">
                 <p class="text-xs text-slate-500">Harvested Electrical Power</p>
                 <p class="font-display text-2xl font-bold text-emerald-700 tabular-nums mt-1">
                   {{ harvestedWatts() }} W
                 </p>
                 <p class="text-xs text-slate-500 mt-1">Regulated 5V USB / Lights</p>
               </div>
-              <div class="bg-white rounded-xl border border-slate-200 p-4">
-                <p class="text-xs text-slate-500">Front Wheel Slip Risk</p>
-                <p class="font-display text-2xl font-bold text-slate-900 tabular-nums mt-1">
+              <div class="bg-ocean-mist rounded-xl border border-ocean-line p-4">
+                <p class="text-xs text-slate-600">Front Wheel Slip Risk</p>
+                <p class="font-display text-2xl font-bold text-ocean tabular-nums mt-1">
                   {{ lockupStatus() }}
                 </p>
-                <p class="text-xs text-slate-500 mt-1">Load-capped generator drag</p>
+                <p class="text-xs text-slate-600 mt-1">Load-capped generator drag</p>
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@ type SuspensionMode = 'comfort' | 'sport' | 'off-road';
               </p>
             </div>
             <div class="bg-white rounded-2xl border border-slate-200 p-6 space-y-2.5">
-              <mat-icon class="text-emerald-600">shield</mat-icon>
+              <mat-icon class="text-ocean">shield</mat-icon>
               <h3 class="font-display text-lg font-semibold text-slate-900">
                 Built-In Anti-Lock Safety
               </h3>
@@ -104,7 +104,7 @@ type SuspensionMode = 'comfort' | 'sport' | 'off-road';
               </p>
             </div>
             <div class="bg-white rounded-2xl border border-slate-200 p-6 space-y-2.5">
-              <mat-icon class="text-emerald-600">recycling</mat-icon>
+              <mat-icon class="text-seaglass">recycling</mat-icon>
               <h3 class="font-display text-lg font-semibold text-slate-900">Capture & Reuse</h3>
               <p class="text-sm text-slate-600 leading-relaxed">
                 Instead of dissipating every city stop as wasted brake heat, kinetic energy flows
@@ -112,7 +112,7 @@ type SuspensionMode = 'comfort' | 'sport' | 'off-road';
               </p>
             </div>
             <div class="bg-white rounded-2xl border border-slate-200 p-6 space-y-2.5">
-              <mat-icon class="text-emerald-600">build</mat-icon>
+              <mat-icon class="text-slate-700">build</mat-icon>
               <h3 class="font-display text-lg font-semibold text-slate-900">Low Maintenance</h3>
               <p class="text-sm text-slate-600 leading-relaxed">
                 Electromagnetic coils reduce reliance on sacrificial rubber or resin pads—lowering
@@ -189,14 +189,14 @@ type SuspensionMode = 'comfort' | 'sport' | 'off-road';
           </div>
           <div class="space-y-2 border-t md:border-t-0 md:border-l border-slate-200 pt-5 md:pt-0 md:pl-8">
             <p class="text-xs text-slate-500">Damping & Calibration</p>
-            <p class="font-mono text-lg font-semibold text-emerald-700 tabular-nums">
+            <p class="font-mono text-lg font-semibold text-seaglass tabular-nums">
               {{ tuning.damping }}
             </p>
             <p class="text-sm text-slate-600 leading-relaxed">{{ tuning.terrainFocus }}</p>
           </div>
           <div class="space-y-2 border-t md:border-t-0 md:border-l border-slate-200 pt-5 md:pt-0 md:pl-8">
             <p class="text-xs text-slate-500">Predictive Auto-Shifting</p>
-            <p class="font-mono text-lg font-semibold text-slate-900 tabular-nums">
+            <p class="font-mono text-lg font-semibold text-ocean tabular-nums">
               {{ tuning.shiftCadence }}
             </p>
             <p class="text-sm text-slate-600 leading-relaxed">{{ tuning.shiftLogic }}</p>
@@ -223,7 +223,7 @@ type SuspensionMode = 'comfort' | 'sport' | 'off-road';
 
           <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
             <div class="space-y-4">
-              <p class="text-sm font-medium text-sky-700">
+              <p class="text-sm font-medium text-ocean">
                 Store Concept · H₂ E-Bike & eMobility Solution
               </p>
               <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
@@ -238,7 +238,7 @@ type SuspensionMode = 'comfort' | 'sport' | 'off-road';
             </div>
 
             <!-- Validated Concept Interest Form -->
-            <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6">
+            <div class="bg-pearl rounded-2xl border border-mineral-line p-6">
               @if (waitlistSubmitted()) {
                 <div class="space-y-2 py-2">
                   <div class="flex items-center gap-2 text-emerald-700 font-semibold text-sm">

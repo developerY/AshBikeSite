@@ -32,16 +32,16 @@ import {
               [href]="essay.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="group bg-slate-50 hover:bg-white rounded-2xl border border-slate-200 hover:border-emerald-300 p-6 flex flex-col justify-between space-y-4 transition-colors"
+              class="group bg-pearl hover:bg-white rounded-2xl border border-mineral-line hover:border-emerald-300 p-6 flex flex-col justify-between space-y-4 transition-colors"
             >
               <div class="space-y-2.5">
-                <p class="text-xs font-medium text-emerald-700">{{ essay.topic }}</p>
+                <p class="text-xs font-medium text-seaglass">{{ essay.topic }}</p>
                 <h2 class="font-display text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
                   {{ essay.title }}
                 </h2>
                 <p class="text-sm text-slate-600 leading-relaxed">{{ essay.summary }}</p>
               </div>
-              <div class="flex items-center gap-1.5 text-xs font-semibold text-slate-800">
+              <div class="flex items-center gap-1.5 text-xs font-semibold text-ocean">
                 <span>Read on Medium</span>
                 <mat-icon class="!text-[16px] !w-[16px] !h-[16px] leading-none">
                   open_in_new
@@ -173,7 +173,7 @@ import {
               </p>
             </div>
 
-            <div class="flex items-center gap-1 p-1 bg-slate-100 rounded-xl">
+            <div class="flex items-center gap-1 p-1 bg-mineral rounded-xl">
               <button
                 type="button"
                 (click)="legalTab.set('privacy')"

@@ -18,7 +18,7 @@ import {MatIconModule} from '@angular/material/icon';
         />
       } @else {
         <div
-          class="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-slate-50 via-emerald-50/40 to-slate-100 text-slate-600"
+          class="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-pearl via-emerald-50/40 to-ocean-mist text-slate-600"
         >
           <mat-icon class="text-emerald-600 mb-2">directions_bike</mat-icon>
           <p class="text-sm font-medium text-slate-800">{{ fallbackTitle() || alt() }}</p>

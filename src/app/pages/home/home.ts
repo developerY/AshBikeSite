@@ -13,7 +13,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, MatIconModule, ResilientImage],
   template: `
-    <!-- Sunlit Split Hero -->
+    <!-- Sunlit Split Hero (Original Crisp White + Emerald + Slate) -->
     <section class="bg-white border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
@@ -47,7 +47,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
                 </a>
                 <a
                   routerLink="/cities"
-                  class="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-slate-800 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600"
+                  class="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-slate-800 bg-slate-50 hover:bg-mineral border border-slate-200 rounded-xl transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600"
                 >
                   <span>Rethinking Cities</span>
                   <mat-icon class="!text-[18px] !w-[18px] !h-[18px] leading-none">
@@ -113,7 +113,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
       </div>
     </section>
 
-    <!-- Asymmetric Bento Grid: Core AshBike Pillars -->
+    <!-- Asymmetric Bento Grid: Core AshBike Pillars (with Pearl, Mineral, Sea-Glass & Ocean accents) -->
     <section class="bg-slate-50 border-b border-slate-200 py-16 lg:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-2xl mb-12 space-y-3">
@@ -130,7 +130,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <!-- Featured 2-column Bento Card -->
           <div
-            class="lg:col-span-2 bg-white rounded-2xl border border-slate-200 overflow-hidden grid grid-cols-1 md:grid-cols-2"
+            class="lg:col-span-2 bg-pearl rounded-2xl border border-mineral-line overflow-hidden grid grid-cols-1 md:grid-cols-2"
           >
             <div class="p-7 sm:p-8 flex flex-col justify-between space-y-6">
               <div class="space-y-3">
@@ -168,10 +168,10 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
             </div>
           </div>
 
-          <!-- Vertical Bike Tower Bento Card -->
-          <div class="bg-white rounded-2xl border border-slate-200 p-7 sm:p-8 flex flex-col justify-between space-y-6">
+          <!-- Vertical Bike Tower Bento Card (Sea-Glass Green accent) -->
+          <div class="bg-white rounded-2xl border border-mineral-line p-7 sm:p-8 flex flex-col justify-between space-y-6">
             <div class="space-y-3">
-              <p class="text-xs font-medium text-slate-500">Urban Parking · Micro-Mobility</p>
+              <p class="text-xs font-medium text-seaglass">Urban Parking · Micro-Mobility</p>
               <h3 class="font-display text-2xl font-bold text-slate-900 tracking-tight">
                 Vertical Bike Tower
               </h3>
@@ -184,7 +184,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
             <div>
               <a
                 routerLink="/cities"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-800 transition-colors"
+                class="inline-flex items-center gap-2 text-sm font-semibold text-seaglass hover:text-seaglass-deep transition-colors"
               >
                 <span>Try Tower Simulator</span>
                 <mat-icon class="!text-[18px] !w-[18px] !h-[18px] leading-none">
@@ -194,10 +194,10 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
             </div>
           </div>
 
-          <!-- Regenerative Front Brakes -->
-          <div class="bg-white rounded-2xl border border-slate-200 p-7 sm:p-8 flex flex-col justify-between space-y-6">
+          <!-- Regenerative Front Brakes (Emerald primary accent) -->
+          <div class="bg-white rounded-2xl border border-mineral-line p-7 sm:p-8 flex flex-col justify-between space-y-6">
             <div class="space-y-3">
-              <p class="text-xs font-medium text-slate-500">Electric Brakes · Anti-Lock Safety</p>
+              <p class="text-xs font-medium text-emerald-700">Electric Brakes · Anti-Lock Safety</p>
               <h3 class="font-display text-2xl font-bold text-slate-900 tracking-tight">
                 Regenerative Front Braking
               </h3>
@@ -220,9 +220,9 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
             </div>
           </div>
 
-          <!-- H2 E-Bike Concept (2-col) -->
+          <!-- H2 E-Bike Concept (Deep Ocean Blue accent) -->
           <div
-            class="lg:col-span-2 bg-white rounded-2xl border border-slate-200 overflow-hidden grid grid-cols-1 md:grid-cols-2"
+            class="lg:col-span-2 bg-pearl rounded-2xl border border-mineral-line overflow-hidden grid grid-cols-1 md:grid-cols-2"
           >
             <div class="min-h-[240px] bg-slate-100 order-2 md:order-1">
               <app-resilient-image
@@ -234,7 +234,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
             </div>
             <div class="p-7 sm:p-8 flex flex-col justify-between space-y-6 order-1 md:order-2">
               <div class="space-y-3">
-                <p class="text-xs font-medium text-sky-700">AshBike Store Concept · H₂</p>
+                <p class="text-xs font-medium text-ocean">AshBike Store Concept · H₂</p>
                 <h3 class="font-display text-2xl font-bold text-slate-900 tracking-tight">
                   The H₂ E-Bike Concept
                 </h3>
@@ -248,7 +248,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
                 <a
                   routerLink="/hardware"
                   fragment="h2-concept"
-                  class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-800 transition-colors"
+                  class="inline-flex items-center gap-2 text-sm font-semibold text-ocean hover:text-ocean-deep transition-colors"
                 >
                   <span>View H₂ Concept & Waitlist</span>
                   <mat-icon class="!text-[18px] !w-[18px] !h-[18px] leading-none">
@@ -276,7 +276,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
           <div
             role="tablist"
             aria-label="AshBike Applications"
-            class="flex flex-wrap items-center gap-1.5 p-1.5 bg-slate-100 rounded-xl border border-slate-200"
+            class="flex flex-wrap items-center gap-1.5 p-1.5 bg-mineral rounded-xl border border-mineral-line"
           >
             @for (app of apps; track app.id) {
               <button
@@ -309,7 +309,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
 
             <div class="flex items-start gap-4">
               <div
-                class="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-emerald-600 shrink-0"
+                class="w-12 h-12 rounded-xl bg-seaglass-mist border border-seaglass-line flex items-center justify-center text-seaglass shrink-0"
               >
                 <mat-icon>{{ current.icon }}</mat-icon>
               </div>
@@ -338,10 +338,10 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
             </div>
           </div>
 
-          <div class="lg:col-span-5 bg-white rounded-xl border border-slate-200 p-6 space-y-4">
-            <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+          <div class="lg:col-span-5 bg-pearl rounded-xl border border-mineral-line p-6 space-y-4">
+            <div class="flex items-center justify-between pb-3 border-b border-mineral-line">
               <span class="text-xs font-medium text-slate-500">{{ current.metricLabel }}</span>
-              <span class="font-mono text-sm font-semibold text-emerald-700 tabular-nums">
+              <span class="font-mono text-sm font-semibold text-ocean tabular-nums">
                 {{ current.metricValue }}
               </span>
             </div>
@@ -419,13 +419,13 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
                 </div>
                 <div>
                   <p class="text-xs text-slate-500">Active Energy Burned</p>
-                  <p class="font-display text-2xl font-bold text-slate-900 tabular-nums mt-0.5">
+                  <p class="font-display text-2xl font-bold text-seaglass tabular-nums mt-0.5">
                     {{ annualKcal() }} kcal
                   </p>
                 </div>
                 <div>
                   <p class="text-xs text-slate-500">Regen Brake Phone Charges</p>
-                  <p class="font-display text-2xl font-bold text-sky-700 tabular-nums mt-0.5">
+                  <p class="font-display text-2xl font-bold text-ocean tabular-nums mt-0.5">
                     {{ regenCharges() }}× full
                   </p>
                 </div>

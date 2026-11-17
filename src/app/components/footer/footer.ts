@@ -29,16 +29,16 @@ import {RouterLink} from '@angular/router';
             <h3 class="font-display font-semibold text-slate-900 text-sm">Platform</h3>
             <ul class="space-y-2">
               <li>
-                <a routerLink="/" class="hover:text-slate-900 transition-colors">Overview</a>
+                <a routerLink="/" class="hover:text-ocean transition-colors">Overview</a>
               </li>
               <li>
-                <a routerLink="/tech" class="hover:text-slate-900 transition-colors">Tech & Apps</a>
+                <a routerLink="/tech" class="hover:text-ocean transition-colors">Tech & Apps</a>
               </li>
               <li>
-                <a routerLink="/hardware" class="hover:text-slate-900 transition-colors">Hardware</a>
+                <a routerLink="/hardware" class="hover:text-ocean transition-colors">Hardware</a>
               </li>
               <li>
-                <a routerLink="/cities" class="hover:text-slate-900 transition-colors">Cities</a>
+                <a routerLink="/cities" class="hover:text-ocean transition-colors">Cities</a>
               </li>
             </ul>
           </div>
@@ -47,22 +47,22 @@ import {RouterLink} from '@angular/router';
             <h3 class="font-display font-semibold text-slate-900 text-sm">Concepts & Apps</h3>
             <ul class="space-y-2">
               <li>
-                <a routerLink="/tech" class="hover:text-slate-900 transition-colors"
+                <a routerLink="/tech" class="hover:text-ocean transition-colors"
                   >AshBike & Health Connect</a
                 >
               </li>
               <li>
-                <a routerLink="/tech" class="hover:text-slate-900 transition-colors"
+                <a routerLink="/tech" class="hover:text-ocean transition-colors"
                   >Swift Bike Shift & GoSwift</a
                 >
               </li>
               <li>
-                <a routerLink="/hardware" class="hover:text-slate-900 transition-colors"
+                <a routerLink="/hardware" class="hover:text-ocean transition-colors"
                   >Regenerative Anti-Lock Brakes</a
                 >
               </li>
               <li>
-                <a routerLink="/hardware" class="hover:text-slate-900 transition-colors"
+                <a routerLink="/hardware" class="hover:text-ocean transition-colors"
                   >H₂ E-Bike Concept</a
                 >
               </li>
@@ -73,7 +73,7 @@ import {RouterLink} from '@angular/router';
             <h3 class="font-display font-semibold text-slate-900 text-sm">Info & Legal</h3>
             <ul class="space-y-2">
               <li>
-                <a routerLink="/info" class="hover:text-slate-900 transition-colors"
+                <a routerLink="/info" class="hover:text-ocean transition-colors"
                   >Essays & Contact</a
                 >
               </li>
@@ -81,7 +81,7 @@ import {RouterLink} from '@angular/router';
                 <a
                   routerLink="/info"
                   fragment="legal"
-                  class="hover:text-slate-900 transition-colors"
+                  class="hover:text-ocean transition-colors"
                   >App Privacy Policy</a
                 >
               </li>
@@ -89,7 +89,7 @@ import {RouterLink} from '@angular/router';
                 <a
                   routerLink="/info"
                   fragment="legal"
-                  class="hover:text-slate-900 transition-colors"
+                  class="hover:text-ocean transition-colors"
                   >EULA & Ride Safety</a
                 >
               </li>
