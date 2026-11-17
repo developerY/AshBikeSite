@@ -1,0 +1,8 @@
+{
+  "name": "ashbike",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist/app/browser",
+    "not_found_handling": "single-page-application"
+  }
+}
