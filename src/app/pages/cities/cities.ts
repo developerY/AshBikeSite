@@ -170,6 +170,43 @@ interface TowerSlot {
             </div>
           </div>
         </div>
+
+        <!-- Bike Tower Concept Video -->
+        <div class="mt-10 bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h3 class="font-display text-lg font-bold text-slate-900">
+                Bike Tower in Action
+              </h3>
+              <p class="text-xs text-slate-500">
+                Vertical bicycle storage and automated street-level retrieval
+              </p>
+            </div>
+            <a
+              href="https://youtu.be/Nk4CwEw4rw8"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 hover:text-emerald-800 transition-colors whitespace-nowrap"
+            >
+              <span>Watch on YouTube</span>
+              <mat-icon class="!text-[16px] !w-[16px] !h-[16px] leading-none">
+                open_in_new
+              </mat-icon>
+            </a>
+          </div>
+
+          <div class="aspect-video w-full rounded-xl overflow-hidden bg-slate-100 border border-slate-200">
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/Nk4CwEw4rw8"
+              title="Vertical Bike Parking Bike Tower Video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
       </div>
     </section>
 
