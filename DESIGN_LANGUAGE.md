@@ -211,7 +211,7 @@ Sections alternate between `bg-pearl` and `bg-mineral`, separated by `border-b b
 
 - **Icons**: Google Material Icons (`Material Icons` font). Button icons: `!text-[18px] !w-[18px] !h-[18px] leading-none`. Inline checks/external links: `15px–16px`. Standalone card icons: default `24px` in `text-ocean`, `text-seaglass`, or `text-slate-700`.
 - **Photography Art Direction**: Bright natural daylight, light architectural stone, lush greenery, clean matte frames, `16:9` hero and `4:3` feature crops.
-- **Favicon**: Winged bicycle wheel emblem (`/assets/aistudio/image_b0b3173d.png` & `/favicon.ico`); top navbar stays a crisp text-only **AshBike** wordmark.
+- **Favicon**: Microchip megaphone icon (`/assets/aistudio/Gemini_Generated_Image_3d15ne3d15ne3d15_526e427f.png` & `/favicon.ico`); top navbar stays a crisp text-only **AshBike** wordmark.
 
 ---
 
