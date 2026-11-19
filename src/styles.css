@@ -1,4 +1,4 @@
-/* Global styles for AshBike — Crisp Light Mode with Emerald Primary & Coastal Accents */
+/* Global styles for AshBike — Coastal Light Mode: Deep Ocean Blue, Slate, Mineral Grey, Sea-Glass Green & Pearl */
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import "tailwindcss";
 
@@ -9,17 +9,18 @@
 
   --color-pearl: #FAF9F6;
   --color-mineral: #EEF2F4;
+  --color-mineral-soft: #F4F6F8;
   --color-mineral-line: #D4DEE4;
 
   --color-ocean: #0B4F78;
   --color-ocean-deep: #083A59;
-  --color-ocean-mist: #EAF2F7;
-  --color-ocean-line: #BFD6E4;
+  --color-ocean-mist: #E7F1F7;
+  --color-ocean-line: #B8D2E3;
 
-  --color-seaglass: #1C6E63;
-  --color-seaglass-deep: #15564D;
-  --color-seaglass-mist: #E7F4F1;
-  --color-seaglass-line: #B6DBD4;
+  --color-seaglass: #1D7A6E;
+  --color-seaglass-deep: #155E55;
+  --color-seaglass-mist: #E6F4F1;
+  --color-seaglass-line: #B2DAD2;
 }
 
 @layer base {
@@ -27,7 +28,7 @@
     font-family: var(--font-sans);
     scroll-behavior: smooth;
     color-scheme: light;
-    background-color: #ffffff;
+    background-color: #FAF9F6;
     color: #0f172a;
   }
 

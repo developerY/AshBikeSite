@@ -6,7 +6,7 @@ import {RouterLink} from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink],
   template: `
-    <footer class="border-t border-slate-200 bg-slate-50 text-slate-600">
+    <footer class="border-t border-mineral-line bg-mineral text-slate-600">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div class="md:col-span-5 space-y-3">
@@ -98,7 +98,7 @@ import {RouterLink} from '@angular/router';
         </div>
 
         <div
-          class="mt-12 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-slate-500"
+          class="mt-12 pt-6 border-t border-mineral-line flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-slate-500"
         >
           <p>
             © 2026 AshBike & ZoeWave. Ride safely—review routes and metrics only when stationary.

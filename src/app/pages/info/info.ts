@@ -13,10 +13,10 @@ import {
   imports: [ReactiveFormsModule, MatIconModule],
   template: `
     <!-- Manifesto & Published Essays -->
-    <section class="bg-white border-b border-slate-200 py-14 lg:py-20">
+    <section class="bg-pearl border-b border-mineral-line py-14 lg:py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl space-y-4 mb-12">
-          <p class="text-sm font-medium text-emerald-700">About · ZoeWave & AshBike</p>
+          <p class="text-sm font-medium text-ocean">About · ZoeWave & AshBike</p>
           <h1 class="font-display text-4xl sm:text-5xl font-bold text-slate-900 tracking-tight leading-[1.08]">
             We are all athletes using our energy to save our planet and ourselves.
           </h1>
@@ -32,11 +32,11 @@ import {
               [href]="essay.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="group bg-pearl hover:bg-white rounded-2xl border border-mineral-line hover:border-emerald-300 p-6 flex flex-col justify-between space-y-4 transition-colors"
+              class="group bg-white hover:bg-ocean-mist/35 rounded-2xl border border-mineral-line hover:border-ocean-line p-6 flex flex-col justify-between space-y-4 transition-colors"
             >
               <div class="space-y-2.5">
                 <p class="text-xs font-medium text-seaglass">{{ essay.topic }}</p>
-                <h2 class="font-display text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
+                <h2 class="font-display text-lg font-bold text-slate-900 group-hover:text-ocean transition-colors">
                   {{ essay.title }}
                 </h2>
                 <p class="text-sm text-slate-600 leading-relaxed">{{ essay.summary }}</p>
@@ -54,12 +54,12 @@ import {
     </section>
 
     <!-- Contact Inquiry & Legal Reader -->
-    <section id="legal" class="bg-slate-50 py-16 lg:py-24">
+    <section id="legal" class="bg-mineral py-16 lg:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         <!-- Validated Contact Form -->
-        <div class="lg:col-span-5 bg-white rounded-2xl border border-slate-200 p-7 space-y-6">
+        <div class="lg:col-span-5 bg-white rounded-2xl border border-mineral-line p-7 space-y-6">
           <div class="space-y-1.5">
-            <p class="text-xs font-medium text-emerald-700">Get in Touch</p>
+            <p class="text-xs font-medium text-seaglass">Get in Touch</p>
             <h2 class="font-display text-2xl font-bold text-slate-900">Contact AshBike</h2>
             <p class="text-sm text-slate-600">
               Questions on Android/iOS testing, city micro-mobility pilots, or hardware concepts.
@@ -67,8 +67,8 @@ import {
           </div>
 
           @if (contactSubmitted()) {
-            <div class="p-5 rounded-xl bg-emerald-50/70 border border-emerald-200 space-y-2">
-              <div class="flex items-center gap-2 text-emerald-800 font-semibold text-sm">
+            <div class="p-5 rounded-xl bg-seaglass-mist border border-seaglass-line space-y-2">
+              <div class="flex items-center gap-2 text-seaglass-deep font-semibold text-sm">
                 <mat-icon>check_circle</mat-icon>
                 <span>Message Received</span>
               </div>
@@ -79,7 +79,7 @@ import {
               <button
                 type="button"
                 (click)="resetContact()"
-                class="text-xs font-semibold text-emerald-800 underline pt-1"
+                class="text-xs font-semibold text-ocean underline hover:text-ocean-deep pt-1"
               >
                 Send another inquiry
               </button>
@@ -95,7 +95,7 @@ import {
                   type="text"
                   formControlName="name"
                   placeholder="Alex Rivera"
-                  class="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                  class="w-full px-3.5 py-2.5 text-sm bg-pearl border border-mineral-line rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-ocean focus:bg-white"
                 />
                 @if (contactForm.controls.name.touched && contactForm.controls.name.invalid) {
                   <p class="text-xs text-rose-600 mt-1">Name is required.</p>
@@ -111,7 +111,7 @@ import {
                   type="email"
                   formControlName="email"
                   placeholder="alex@example.com"
-                  class="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                  class="w-full px-3.5 py-2.5 text-sm bg-pearl border border-mineral-line rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-ocean focus:bg-white"
                 />
                 @if (contactForm.controls.email.touched && contactForm.controls.email.invalid) {
                   <p class="text-xs text-rose-600 mt-1">Please enter a valid email address.</p>
@@ -125,7 +125,7 @@ import {
                 <select
                   id="contact-topic"
                   formControlName="topic"
-                  class="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                  class="w-full px-3.5 py-2.5 text-sm bg-pearl border border-mineral-line rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-ocean focus:bg-white"
                 >
                   <option value="apps">AshBike / Swift Bike Shift / GoSwift Apps</option>
                   <option value="hardware">Regenerative Brakes & H₂ Concept</option>
@@ -143,7 +143,7 @@ import {
                   rows="3"
                   formControlName="message"
                   placeholder="Tell us how you'd like to collaborate..."
-                  class="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                  class="w-full px-3.5 py-2.5 text-sm bg-pearl border border-mineral-line rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-ocean focus:bg-white"
                 ></textarea>
                 @if (contactForm.controls.message.touched && contactForm.controls.message.invalid) {
                   <p class="text-xs text-rose-600 mt-1">Please include at least 10 characters.</p>
@@ -152,7 +152,7 @@ import {
 
               <button
                 type="submit"
-                class="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl transition-colors"
+                class="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-ocean hover:bg-ocean-deep rounded-xl transition-colors"
               >
                 <mat-icon class="!text-[18px] !w-[18px] !h-[18px] leading-none">send</mat-icon>
                 <span>Send Message</span>
@@ -162,8 +162,8 @@ import {
         </div>
 
         <!-- Tabbed Privacy Policy & EULA -->
-        <div class="lg:col-span-7 bg-white rounded-2xl border border-slate-200 p-7 space-y-6">
-          <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-200">
+        <div class="lg:col-span-7 bg-white rounded-2xl border border-mineral-line p-7 space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-mineral-line">
             <div>
               <h2 class="font-display text-2xl font-bold text-slate-900">
                 App Privacy Policy & EULA
@@ -173,13 +173,13 @@ import {
               </p>
             </div>
 
-            <div class="flex items-center gap-1 p-1 bg-mineral rounded-xl">
+            <div class="flex items-center gap-1 p-1 bg-mineral rounded-xl border border-mineral-line">
               <button
                 type="button"
                 (click)="legalTab.set('privacy')"
                 [class]="
                   legalTab() === 'privacy'
-                    ? 'px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white text-slate-900 shadow-sm whitespace-nowrap'
+                    ? 'px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white text-ocean-deep shadow-sm whitespace-nowrap'
                     : 'px-3.5 py-1.5 text-xs font-medium rounded-lg text-slate-600 hover:text-slate-900 whitespace-nowrap'
                 "
               >
@@ -190,7 +190,7 @@ import {
                 (click)="legalTab.set('eula')"
                 [class]="
                   legalTab() === 'eula'
-                    ? 'px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white text-slate-900 shadow-sm whitespace-nowrap'
+                    ? 'px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white text-ocean-deep shadow-sm whitespace-nowrap'
                     : 'px-3.5 py-1.5 text-xs font-medium rounded-lg text-slate-600 hover:text-slate-900 whitespace-nowrap'
                 "
               >

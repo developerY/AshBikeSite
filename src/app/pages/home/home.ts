@@ -13,13 +13,13 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, MatIconModule, ResilientImage],
   template: `
-    <!-- Sunlit Split Hero (Original Crisp White + Emerald + Slate) -->
-    <section class="bg-white border-b border-slate-200">
+    <!-- Sunlit Split Hero (Pearl + Deep Ocean Blue + Slate + Mineral) -->
+    <section class="bg-pearl border-b border-mineral-line">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
           <div class="lg:col-span-6 flex flex-col justify-between space-y-8">
             <div class="space-y-6">
-              <p class="text-sm font-medium text-emerald-700 tracking-tight">
+              <p class="text-sm font-medium text-seaglass tracking-tight">
                 AshBike · ZoeWave Urban Mobility Initiative
               </p>
               <h1
@@ -38,7 +38,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
               <div class="flex flex-wrap items-center gap-4">
                 <a
                   routerLink="/tech"
-                  class="inline-flex items-center gap-2.5 px-6 py-3 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2"
+                  class="inline-flex items-center gap-2.5 px-6 py-3 text-sm font-semibold text-white bg-ocean hover:bg-ocean-deep rounded-xl transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ocean focus-visible:ring-offset-2"
                 >
                   <mat-icon class="!text-[19px] !w-[19px] !h-[19px] leading-none">
                     explore
@@ -47,7 +47,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
                 </a>
                 <a
                   routerLink="/cities"
-                  class="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-slate-800 bg-slate-50 hover:bg-mineral border border-slate-200 rounded-xl transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600"
+                  class="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-slate-800 bg-white hover:bg-mineral border border-mineral-line rounded-xl transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ocean"
                 >
                   <span>Rethinking Cities</span>
                   <mat-icon class="!text-[18px] !w-[18px] !h-[18px] leading-none">
@@ -64,7 +64,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
 
           <div class="lg:col-span-6">
             <div
-              class="h-full min-h-[300px] lg:min-h-[440px] rounded-2xl overflow-hidden border border-slate-200 bg-slate-100"
+              class="h-full min-h-[300px] lg:min-h-[440px] rounded-2xl overflow-hidden border border-mineral-line bg-mineral"
             >
               <app-resilient-image
                 [src]="images.hero"
@@ -79,17 +79,17 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
 
         <!-- Full-Width 4-Column Impact Strip -->
         <div
-          class="mt-12 pt-8 border-t border-slate-200 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
+          class="mt-12 pt-8 border-t border-mineral-line grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
         >
           <div>
-            <p class="font-display text-2xl sm:text-3xl font-bold text-slate-900 tabular-nums">
+            <p class="font-display text-2xl sm:text-3xl font-bold text-seaglass-deep tabular-nums">
               0 g/km
             </p>
             <p class="text-sm font-medium text-slate-800 mt-1">Tailpipe Emissions</p>
             <p class="text-xs text-slate-500 mt-0.5">Clean air across daily commutes</p>
           </div>
           <div>
-            <p class="font-display text-2xl sm:text-3xl font-bold text-slate-900 tabular-nums">
+            <p class="font-display text-2xl sm:text-3xl font-bold text-ocean tabular-nums">
               8 Sensors
             </p>
             <p class="text-sm font-medium text-slate-800 mt-1">Bicycle Brain Fusion</p>
@@ -113,11 +113,11 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
       </div>
     </section>
 
-    <!-- Asymmetric Bento Grid: Core AshBike Pillars (with Pearl, Mineral, Sea-Glass & Ocean accents) -->
-    <section class="bg-slate-50 border-b border-slate-200 py-16 lg:py-24">
+    <!-- Asymmetric Bento Grid: Core AshBike Pillars -->
+    <section class="bg-mineral border-b border-mineral-line py-16 lg:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-2xl mb-12 space-y-3">
-          <p class="text-sm font-medium text-emerald-700">01. Core Architecture</p>
+          <p class="text-sm font-medium text-ocean">01. Core Architecture</p>
           <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
             Saving the Earth one bike at a time.
           </h2>
@@ -134,7 +134,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
           >
             <div class="p-7 sm:p-8 flex flex-col justify-between space-y-6">
               <div class="space-y-3">
-                <p class="text-xs font-medium text-slate-500">
+                <p class="text-xs font-medium text-ocean">
                   Smartphone / Bicycle Fusion · Android & iOS
                 </p>
                 <h3 class="font-display text-2xl font-bold text-slate-900 tracking-tight">
@@ -149,7 +149,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
               <div class="pt-2">
                 <a
                   routerLink="/tech"
-                  class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-800 transition-colors"
+                  class="inline-flex items-center gap-2 text-sm font-semibold text-ocean hover:text-ocean-deep transition-colors"
                 >
                   <span>Inspect Sensor Suite & Apps</span>
                   <mat-icon class="!text-[18px] !w-[18px] !h-[18px] leading-none">
@@ -158,7 +158,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
                 </a>
               </div>
             </div>
-            <div class="min-h-[240px] bg-slate-100">
+            <div class="min-h-[240px] bg-mineral">
               <app-resilient-image
                 [src]="images.cockpit"
                 alt="Smartphone mounted cleanly on minimalist bicycle handlebars showing bright route map"
@@ -194,10 +194,10 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
             </div>
           </div>
 
-          <!-- Regenerative Front Brakes (Emerald primary accent) -->
+          <!-- Regenerative Front Brakes (Sea-Glass Green accent) -->
           <div class="bg-white rounded-2xl border border-mineral-line p-7 sm:p-8 flex flex-col justify-between space-y-6">
             <div class="space-y-3">
-              <p class="text-xs font-medium text-emerald-700">Electric Brakes · Anti-Lock Safety</p>
+              <p class="text-xs font-medium text-seaglass">Electric Brakes · Anti-Lock Safety</p>
               <h3 class="font-display text-2xl font-bold text-slate-900 tracking-tight">
                 Regenerative Front Braking
               </h3>
@@ -210,7 +210,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
             <div>
               <a
                 routerLink="/hardware"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-800 transition-colors"
+                class="inline-flex items-center gap-2 text-sm font-semibold text-seaglass hover:text-seaglass-deep transition-colors"
               >
                 <span>Simulate Brake Harvest</span>
                 <mat-icon class="!text-[18px] !w-[18px] !h-[18px] leading-none">
@@ -224,7 +224,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
           <div
             class="lg:col-span-2 bg-pearl rounded-2xl border border-mineral-line overflow-hidden grid grid-cols-1 md:grid-cols-2"
           >
-            <div class="min-h-[240px] bg-slate-100 order-2 md:order-1">
+            <div class="min-h-[240px] bg-mineral order-2 md:order-1">
               <app-resilient-image
                 [src]="images.h2Bike"
                 alt="Sleek hydrogen-electric concept bicycle in a bright sunlit architectural pavilion"
@@ -263,11 +263,11 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
     </section>
 
     <!-- Interactive App Ecosystem Switcher -->
-    <section class="bg-white border-b border-slate-200 py-16 lg:py-24">
+    <section class="bg-pearl border-b border-mineral-line py-16 lg:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
           <div class="space-y-2 max-w-2xl">
-            <p class="text-sm font-medium text-emerald-700">02. Connected Software Suite</p>
+            <p class="text-sm font-medium text-seaglass">02. Connected Software Suite</p>
             <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
               Shared bike, fitness, and smart-eyewear apps.
             </h2>
@@ -286,7 +286,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
                 (click)="selectApp(app.id)"
                 [class]="
                   selectedAppId() === app.id
-                    ? 'px-3.5 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-white text-slate-900 shadow-sm whitespace-nowrap shrink-0 transition-colors'
+                    ? 'px-3.5 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-white text-ocean-deep shadow-sm whitespace-nowrap shrink-0 transition-colors'
                     : 'px-3.5 py-2 text-xs sm:text-sm font-medium rounded-lg text-slate-600 hover:text-slate-900 whitespace-nowrap shrink-0 transition-colors'
                 "
               >
@@ -298,7 +298,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
 
         @let current = activeApp();
         <div
-          class="bg-slate-50 rounded-2xl border border-slate-200 p-7 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+          class="bg-white rounded-2xl border border-mineral-line p-7 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
         >
           <div class="lg:col-span-7 space-y-5">
             <div class="flex items-center gap-3 text-xs font-medium text-slate-500">
@@ -317,7 +317,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
                 <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">
                   {{ current.name }}
                 </h3>
-                <p class="text-base font-medium text-emerald-700 mt-1">{{ current.tagline }}</p>
+                <p class="text-base font-medium text-ocean mt-1">{{ current.tagline }}</p>
               </div>
             </div>
 
@@ -328,7 +328,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
             <div class="pt-2">
               <a
                 routerLink="/tech"
-                class="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-xl transition-colors whitespace-nowrap shrink-0"
+                class="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-semibold text-white bg-slate-900 hover:bg-ocean-deep rounded-xl transition-colors whitespace-nowrap shrink-0"
               >
                 <span>Open Full App Architecture</span>
                 <mat-icon class="!text-[18px] !w-[18px] !h-[18px] leading-none">
@@ -348,7 +348,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
             <ul class="space-y-3">
               @for (item of current.highlights; track item) {
                 <li class="flex items-start gap-2.5 text-sm text-slate-700">
-                  <mat-icon class="text-emerald-600 !text-[18px] !w-[18px] !h-[18px] mt-0.5 shrink-0">
+                  <mat-icon class="text-seaglass !text-[18px] !w-[18px] !h-[18px] mt-0.5 shrink-0">
                     check_circle_outline
                   </mat-icon>
                   <span>{{ item }}</span>
@@ -361,12 +361,12 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
     </section>
 
     <!-- Interactive Commute Impact & "Why Bike" Calculator -->
-    <section class="bg-slate-50 py-16 lg:py-24">
+    <section class="bg-mineral py-16 lg:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           <div class="lg:col-span-5 space-y-6">
             <div class="space-y-3">
-              <p class="text-sm font-medium text-emerald-700">03. Why Bike · Quantified Impact</p>
+              <p class="text-sm font-medium text-ocean">03. Why Bike · Quantified Impact</p>
               <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
                 See what replacing car miles does in one year.
               </h2>
@@ -377,12 +377,12 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
               </p>
             </div>
 
-            <div class="bg-white rounded-2xl border border-slate-200 p-6 space-y-5">
+            <div class="bg-white rounded-2xl border border-mineral-line p-6 space-y-5">
               <div class="flex items-center justify-between">
                 <label for="weekly-miles" class="text-sm font-semibold text-slate-900">
                   Weekly Bike Distance
                 </label>
-                <span class="font-mono text-xl font-bold text-emerald-700 tabular-nums">
+                <span class="font-mono text-xl font-bold text-ocean tabular-nums">
                   {{ weeklyMiles() }} mi / wk
                 </span>
               </div>
@@ -395,7 +395,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
                 step="5"
                 [value]="weeklyMiles()"
                 (input)="onMilesChange($event)"
-                class="w-full accent-emerald-600 cursor-pointer"
+                class="w-full accent-ocean cursor-pointer"
               />
 
               <div class="flex justify-between text-xs text-slate-500 font-mono tabular-nums">
@@ -404,7 +404,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
                 <span>120 mi (touring)</span>
               </div>
 
-              <div class="grid grid-cols-2 gap-4 pt-3 border-t border-slate-200">
+              <div class="grid grid-cols-2 gap-4 pt-3 border-t border-mineral-line">
                 <div>
                   <p class="text-xs text-slate-500">Annual CO₂ Avoided</p>
                   <p class="font-display text-2xl font-bold text-slate-900 tabular-nums mt-0.5">
@@ -413,7 +413,7 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
                 </div>
                 <div>
                   <p class="text-xs text-slate-500">Car Fuel & Parking Saved</p>
-                  <p class="font-display text-2xl font-bold text-emerald-700 tabular-nums mt-0.5">
+                  <p class="font-display text-2xl font-bold text-seaglass-deep tabular-nums mt-0.5">
                     \${{ annualSavingsUsd() }}
                   </p>
                 </div>
@@ -435,10 +435,10 @@ import {ResilientImage} from '../../components/resilient-image/resilient-image';
 
           <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
             @for (benefit of benefits; track benefit.id) {
-              <div class="bg-white rounded-2xl border border-slate-200 p-6 space-y-3">
+              <div class="bg-pearl rounded-2xl border border-mineral-line p-6 space-y-3">
                 <div class="flex items-center justify-between">
-                  <mat-icon class="text-emerald-600">{{ benefit.icon }}</mat-icon>
-                  <span class="text-xs font-mono text-slate-500 tabular-nums">
+                  <mat-icon class="text-seaglass">{{ benefit.icon }}</mat-icon>
+                  <span class="text-xs font-mono text-ocean tabular-nums">
                     {{ benefit.metric }}
                   </span>
                 </div>

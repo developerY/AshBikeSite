@@ -18,11 +18,11 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
   imports: [MatIconModule, ResilientImage],
   template: `
     <!-- Page Header -->
-    <section class="bg-white border-b border-slate-200 py-14 lg:py-20">
+    <section class="bg-pearl border-b border-mineral-line py-14 lg:py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
           <div class="lg:col-span-6 flex flex-col justify-center space-y-5">
-            <p class="text-sm font-medium text-emerald-700">
+            <p class="text-sm font-medium text-ocean">
               Tech · Smartphone / Bicycle Fusion
             </p>
             <h1 class="font-display text-4xl sm:text-5xl font-bold text-slate-900 tracking-tight leading-[1.08]">
@@ -40,7 +40,7 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
                 [class]="
                   sensorFilter() === 'All'
                     ? 'px-4 py-2 text-xs font-semibold rounded-xl bg-slate-900 text-white whitespace-nowrap shrink-0'
-                    : 'px-4 py-2 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-slate-200 whitespace-nowrap shrink-0'
+                    : 'px-4 py-2 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-mineral-line/60 whitespace-nowrap shrink-0'
                 "
               >
                 All 8 Sensors
@@ -50,8 +50,8 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
                 (click)="filterCategory('Safety')"
                 [class]="
                   sensorFilter() === 'Safety'
-                    ? 'px-4 py-2 text-xs font-semibold rounded-xl bg-emerald-600 text-white whitespace-nowrap shrink-0'
-                    : 'px-4 py-2 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-slate-200 whitespace-nowrap shrink-0'
+                    ? 'px-4 py-2 text-xs font-semibold rounded-xl bg-ocean text-white whitespace-nowrap shrink-0'
+                    : 'px-4 py-2 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-mineral-line/60 whitespace-nowrap shrink-0'
                 "
               >
                 Safety & Vision
@@ -62,7 +62,7 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
                 [class]="
                   sensorFilter() === 'Performance'
                     ? 'px-4 py-2 text-xs font-semibold rounded-xl bg-seaglass text-white whitespace-nowrap shrink-0'
-                    : 'px-4 py-2 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-slate-200 whitespace-nowrap shrink-0'
+                    : 'px-4 py-2 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-mineral-line/60 whitespace-nowrap shrink-0'
                 "
               >
                 Tuning & Shifting
@@ -72,8 +72,8 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
                 (click)="filterCategory('Navigation')"
                 [class]="
                   sensorFilter() === 'Navigation'
-                    ? 'px-4 py-2 text-xs font-semibold rounded-xl bg-ocean text-white whitespace-nowrap shrink-0'
-                    : 'px-4 py-2 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-slate-200 whitespace-nowrap shrink-0'
+                    ? 'px-4 py-2 text-xs font-semibold rounded-xl bg-ocean-deep text-white whitespace-nowrap shrink-0'
+                    : 'px-4 py-2 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-mineral-line/60 whitespace-nowrap shrink-0'
                 "
               >
                 Navigation
@@ -82,7 +82,7 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
           </div>
 
           <div class="lg:col-span-6">
-            <div class="h-full min-h-[280px] rounded-2xl overflow-hidden border border-slate-200 bg-slate-100">
+            <div class="h-full min-h-[280px] rounded-2xl overflow-hidden border border-mineral-line bg-mineral">
               <app-resilient-image
                 [src]="images.cockpit"
                 alt="Minimalist handlebar smartphone mount displaying light-mode AshBike route map"
@@ -97,7 +97,7 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
     </section>
 
     <!-- Interactive 8-Sensor Suite Explorer -->
-    <section class="bg-slate-50 border-b border-slate-200 py-16 lg:py-20">
+    <section class="bg-mineral border-b border-mineral-line py-16 lg:py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -107,14 +107,14 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
                 (click)="selectSensor(sensor)"
                 [class]="
                   activeSensor().id === sensor.id
-                    ? 'text-left p-5 rounded-2xl bg-pearl border-2 border-emerald-600 transition-colors space-y-2'
-                    : 'text-left p-5 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 transition-colors space-y-2'
+                    ? 'text-left p-5 rounded-2xl bg-white border-2 border-ocean transition-colors space-y-2'
+                    : 'text-left p-5 rounded-2xl bg-pearl border border-mineral-line hover:bg-white hover:border-ocean-line transition-colors space-y-2'
                 "
               >
                 <div class="flex items-center justify-between">
                   <mat-icon
                     [class]="
-                      activeSensor().id === sensor.id ? 'text-emerald-600' : 'text-slate-600'
+                      activeSensor().id === sensor.id ? 'text-ocean' : 'text-slate-600'
                     "
                   >
                     {{ sensor.icon }}
@@ -133,9 +133,9 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
             }
           </div>
 
-          <div class="lg:col-span-5 bg-white rounded-2xl border border-slate-200 p-7 space-y-5 sticky top-24">
-            <div class="flex items-center justify-between pb-4 border-b border-slate-200">
-              <span class="text-xs font-medium text-emerald-700">
+          <div class="lg:col-span-5 bg-white rounded-2xl border border-mineral-line p-7 space-y-5 sticky top-24">
+            <div class="flex items-center justify-between pb-4 border-b border-mineral-line">
+              <span class="text-xs font-medium text-seaglass">
                 Active Sensor Architecture
               </span>
               <span class="text-xs text-slate-500">
@@ -161,7 +161,7 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
               {{ activeSensor().detail }}
             </p>
 
-            <div class="pt-4 border-t border-slate-200 space-y-2 text-xs text-slate-600">
+            <div class="pt-4 border-t border-mineral-line space-y-2 text-xs text-slate-600">
               <p class="font-semibold text-slate-900">Core Safety & Privacy Protections</p>
               <p>
                 Crash detection alerts emergency contacts automatically while keeping continuous
@@ -174,10 +174,10 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
     </section>
 
     <!-- Full App Suite Directory -->
-    <section class="bg-white border-b border-slate-200 py-16 lg:py-20">
+    <section class="bg-pearl border-b border-mineral-line py-16 lg:py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-2xl mb-10 space-y-2">
-          <p class="text-sm font-medium text-emerald-700">02. App Ecosystem</p>
+          <p class="text-sm font-medium text-seaglass">02. App Ecosystem</p>
           <h2 class="font-display text-3xl font-bold text-slate-900 tracking-tight">
             From Health Connect to Smart Glass HUD & AR Play.
           </h2>
@@ -189,11 +189,11 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           @for (app of apps; track app.id) {
-            <article class="bg-pearl rounded-2xl border border-mineral-line p-6 flex flex-col justify-between space-y-5">
+            <article class="bg-white rounded-2xl border border-mineral-line p-6 flex flex-col justify-between space-y-5">
               <div class="space-y-3">
                 <div class="flex items-center justify-between">
-                  <mat-icon class="text-emerald-600">{{ app.icon }}</mat-icon>
-                  <span class="text-xs font-mono text-ocean">{{ app.stage }}</span>
+                  <mat-icon class="text-ocean">{{ app.icon }}</mat-icon>
+                  <span class="text-xs font-mono text-seaglass">{{ app.stage }}</span>
                 </div>
                 <p class="text-xs font-medium text-slate-500">{{ app.platform }}</p>
                 <h3 class="font-display text-xl font-bold text-slate-900">{{ app.name }}</h3>
@@ -216,10 +216,10 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
     </section>
 
     <!-- Interactive Route Planning & AR Gamification Configurator -->
-    <section id="route-planner" class="bg-slate-50 py-16 lg:py-24">
+    <section id="route-planner" class="bg-mineral py-16 lg:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-2xl mb-10 space-y-2">
-          <p class="text-sm font-medium text-emerald-700">
+          <p class="text-sm font-medium text-ocean">
             03. Smart Routing & AR Gamification
           </p>
           <h2 class="font-display text-3xl font-bold text-slate-900 tracking-tight">
@@ -232,7 +232,7 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          <div class="lg:col-span-5 bg-white rounded-2xl border border-slate-200 p-6 sm:p-7 space-y-6">
+          <div class="lg:col-span-5 bg-white rounded-2xl border border-mineral-line p-6 sm:p-7 space-y-6">
             <div class="space-y-2.5">
               <p class="text-xs font-semibold text-slate-700">Terrain Preference</p>
               <div class="grid grid-cols-3 gap-2">
@@ -241,8 +241,8 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
                   (click)="terrain.set('flat')"
                   [class]="
                     terrain() === 'flat'
-                      ? 'py-2.5 px-3 text-xs font-semibold rounded-xl bg-emerald-600 text-white whitespace-nowrap'
-                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-slate-200 whitespace-nowrap'
+                      ? 'py-2.5 px-3 text-xs font-semibold rounded-xl bg-ocean text-white whitespace-nowrap'
+                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-mineral-line/60 whitespace-nowrap'
                   "
                 >
                   Flat Cruise
@@ -252,8 +252,8 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
                   (click)="terrain.set('rolling')"
                   [class]="
                     terrain() === 'rolling'
-                      ? 'py-2.5 px-3 text-xs font-semibold rounded-xl bg-emerald-600 text-white whitespace-nowrap'
-                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-slate-200 whitespace-nowrap'
+                      ? 'py-2.5 px-3 text-xs font-semibold rounded-xl bg-ocean text-white whitespace-nowrap'
+                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-mineral-line/60 whitespace-nowrap'
                   "
                 >
                   Rolling Hills
@@ -263,8 +263,8 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
                   (click)="terrain.set('climb')"
                   [class]="
                     terrain() === 'climb'
-                      ? 'py-2.5 px-3 text-xs font-semibold rounded-xl bg-emerald-600 text-white whitespace-nowrap'
-                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-slate-200 whitespace-nowrap'
+                      ? 'py-2.5 px-3 text-xs font-semibold rounded-xl bg-ocean text-white whitespace-nowrap'
+                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-mineral-line/60 whitespace-nowrap'
                   "
                 >
                   Hill Climb
@@ -281,7 +281,7 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
                   [class]="
                     surface() === 'paved'
                       ? 'py-2.5 px-3 text-xs font-semibold rounded-xl bg-slate-900 text-white whitespace-nowrap'
-                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-slate-200 whitespace-nowrap'
+                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-mineral-line/60 whitespace-nowrap'
                   "
                 >
                   Paved Lanes
@@ -292,7 +292,7 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
                   [class]="
                     surface() === 'gravel'
                       ? 'py-2.5 px-3 text-xs font-semibold rounded-xl bg-slate-900 text-white whitespace-nowrap'
-                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-slate-200 whitespace-nowrap'
+                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-mineral-line/60 whitespace-nowrap'
                   "
                 >
                   Gravel Paths
@@ -303,7 +303,7 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
                   [class]="
                     surface() === 'trail'
                       ? 'py-2.5 px-3 text-xs font-semibold rounded-xl bg-slate-900 text-white whitespace-nowrap'
-                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-slate-200 whitespace-nowrap'
+                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-mineral-line/60 whitespace-nowrap'
                   "
                 >
                   Park Trails
@@ -320,7 +320,7 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
                   [class]="
                     rideMode() === 'commute'
                       ? 'py-2.5 px-3 text-xs font-semibold rounded-xl bg-seaglass text-white whitespace-nowrap'
-                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-slate-200 whitespace-nowrap'
+                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-mineral-line/60 whitespace-nowrap'
                   "
                 >
                   Safe Commute
@@ -331,7 +331,7 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
                   [class]="
                     rideMode() === 'ar-quest'
                       ? 'py-2.5 px-3 text-xs font-semibold rounded-xl bg-seaglass text-white whitespace-nowrap'
-                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-slate-200 whitespace-nowrap'
+                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-mineral-line/60 whitespace-nowrap'
                   "
                 >
                   AR Quest
@@ -342,7 +342,7 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
                   [class]="
                     rideMode() === 'cafe-perks'
                       ? 'py-2.5 px-3 text-xs font-semibold rounded-xl bg-seaglass text-white whitespace-nowrap'
-                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-slate-200 whitespace-nowrap'
+                      : 'py-2.5 px-3 text-xs font-medium rounded-xl bg-mineral text-slate-700 hover:bg-mineral-line/60 whitespace-nowrap'
                   "
                 >
                   Café Perks
@@ -352,15 +352,15 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
           </div>
 
           @let plan = generatedRoute();
-          <div class="lg:col-span-7 bg-white rounded-2xl border border-slate-200 p-7 space-y-6">
-            <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-200">
+          <div class="lg:col-span-7 bg-white rounded-2xl border border-mineral-line p-7 space-y-6">
+            <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-mineral-line">
               <div>
                 <p class="text-xs text-slate-500">Generated Route Profile · Local-Only GPS</p>
                 <h3 class="font-display text-2xl font-bold text-slate-900 mt-0.5">
                   {{ plan.title }}
                 </h3>
               </div>
-              <span class="font-mono text-sm font-semibold text-emerald-700 tabular-nums">
+              <span class="font-mono text-sm font-semibold text-ocean tabular-nums">
                 {{ plan.distance }} · {{ plan.elevation }}
               </span>
             </div>
@@ -369,16 +369,16 @@ type RideModeOption = 'commute' | 'ar-quest' | 'cafe-perks';
 
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
               <div class="p-4 rounded-xl bg-ocean-mist border border-ocean-line">
-                <p class="text-xs text-slate-500">Wind & Lighting</p>
+                <p class="text-xs text-slate-600">Wind & Lighting</p>
                 <p class="text-sm font-semibold text-ocean mt-1">{{ plan.conditions }}</p>
               </div>
               <div class="p-4 rounded-xl bg-mineral border border-mineral-line">
-                <p class="text-xs text-slate-500">Traffic Avoidance</p>
+                <p class="text-xs text-slate-600">Traffic Avoidance</p>
                 <p class="text-sm font-semibold text-slate-900 mt-1">{{ plan.trafficNote }}</p>
               </div>
               <div class="p-4 rounded-xl bg-seaglass-mist border border-seaglass-line">
-                <p class="text-xs text-slate-500">Gamification / Perk</p>
-                <p class="text-sm font-semibold text-seaglass mt-1">{{ plan.perk }}</p>
+                <p class="text-xs text-slate-600">Gamification / Perk</p>
+                <p class="text-sm font-semibold text-seaglass-deep mt-1">{{ plan.perk }}</p>
               </div>
             </div>
           </div>

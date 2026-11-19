@@ -6,76 +6,56 @@ A complete visual, typographic, color, layout, and component specification for r
 
 ## 1. Aesthetic Direction & Core Principles
 
-AshBike's design language embodies **Sunlit Civic Mobility**: crisp daylight clarity, architectural restraint, and optimistic energy. It avoids dark-mode tech tropes in favor of an open, breathable, park-and-coast inspired visual system.
+AshBike's design language embodies **Coastal Civic Mobility**: sunlit daylight clarity, architectural restraint, and calm ocean-and-mineral poise. It avoids dark-mode tech tropes in favor of an open, breathable light-mode palette built strictly around **Deep Ocean Blue, Slate, Mineral Grey, Sea-Glass Green, and Pearl**.
 
 ### Guiding Principles
-1. **Daylight-First Light Mode**: Pure white (`#FFFFFF`) and cool slate (`#F8FAFC`) surfaces establish a clean editorial canvas (`color-scheme: light` enforced globally).
-2. **Park-Healthy Emerald as Primary Anchor**: Vibrant Emerald Green (`#059669` / `#047857`) drives all primary calls to action, active navigation indicators, sliders, and primary kickers.
-3. **Coastal & Mineral Accent Harmony**: Deep Ocean Blue (`#0B4F78`), Sea-Glass Green (`#1C6E63`), Mineral Grey (`#EEF2F4`), and warm Pearl (`#FAF9F6`) add visual richness and semantic differentiation across secondary cards, metrics, filters, and links—without competing with the Emerald primary actions.
-4. **Border-Defined Flat Elevation**: Structural hierarchy comes from crisp `1px` hairline borders and surface contrast (`White` vs. `Slate 50` vs. `Pearl`), rather than heavy drop shadows.
+1. **Luminous Daylight Light Mode**: Warm Pearl (`#FAF9F6`) and cool Mineral Grey (`#EEF2F4`) alternate cleanly across sections, punctuated by crisp pure white (`#FFFFFF`) interactive cards (`color-scheme: light` enforced globally).
+2. **Deep Ocean Blue as Primary Anchor**: Deep Ocean Blue (`#0B4F78` / `#083A59`) drives all primary calls to action, active navigation underlines, sliders, selected borders, and focus rings.
+3. **Sea-Glass Green as Vitality & Sustainability Counterpart**: Sea-Glass Green (`#1D7A6E` / `#155E55`) highlights eco-metrics, regenerative energy, secured Bike Tower bays, ride experience modes, checkmarks, and confirmation banners.
+4. **Slate & Mineral Structural Hierarchy**: Slate (`#0F172A`–`#64748B`) governs typography with AAA/AA contrast, while Mineral Grey (`#EEF2F4`) and Mineral Line (`#D4DEE4`) define flat `1px` borders, segmented tracks, and recessed bays without heavy drop shadows.
 5. **Zero-Pill Metadata Discipline**: Category labels, platforms, and dates are rendered as clean typographic text separated by middle dots (`·`)—never wrapped in decorative pill badges or pulsing status dots.
-6. **Editorial Precision with Live Interactivity**: Every page pairs spacious editorial storytelling with hands-on light-mode interactive tools (simulators, calculators, segmented switchers, and clean validated forms).
+6. **Editorial Precision with Live Interactivity**: Every page pairs spacious editorial storytelling with hands-on light-mode tools (commute impact calculator, sensor explorer, route configurator, brake simulator, and live vertical Bike Tower stack).
 
 ---
 
 ## 2. Color System
 
-### 2.1 Base Foundation (Tailwind v4 Defaults)
+### 2.1 Five-Color Palette Architecture
 
-| Token / Class | Hex | Usage |
-|---|---|---|
-| `bg-white` | `#FFFFFF` | Primary page canvas, header, elevated cards, inputs |
-| `bg-slate-50` | `#F8FAFC` | Alternating section backgrounds, footer, secondary buttons |
-| `bg-slate-100` | `#F1F5F9` | Media/image frame loading backgrounds |
-| `border-slate-200` | `#E2E8F0` | Primary section dividers, standard card borders, header/footer hairlines |
-| `border-slate-300` | `#CBD5E1` | Form input borders, hover card borders, disabled primary buttons |
-| `text-slate-400` | `#94A3B8` | Input placeholders, muted/available status labels |
-| `text-slate-500` | `#64748B` | Captions, metadata lines, helper text, footer fine print |
-| `text-slate-600` | `#475569` | Body paragraphs, inactive navigation links, secondary icons |
-| `text-slate-700` | `#334155` | Form labels, list items, neutral button text |
-| `text-slate-800` | `#1E293B` | Sub-labels, metric titles, secondary button labels |
-| `text-slate-900` | `#0F172A` | Primary headings (`h1`–`h4`), wordmark, high-emphasis values, dark secondary CTA |
-
-### 2.2 Primary Brand Color (Emerald Green — Park / Healthy)
-
-| Token / Class | Hex | Usage |
-|---|---|---|
-| `emerald-600` | `#059669` | Primary CTA button fills, active nav underline, range slider `accent-emerald-600`, active card borders (`border-2`), primary icons, focus rings |
-| `emerald-700` | `#047857` | Primary CTA hover fill, section kickers (`01. Core Architecture`), inline links, highlighted primary metrics |
-| `emerald-800` | `#065F46` | Hover state for Emerald links, active mobile nav text, success banner headings |
-| `emerald-50` | `#ECFDF5` | Active mobile nav item background, form success alert background (`bg-emerald-50/70`) |
-| `emerald-100` | `#D1FAE5` | Text highlight selection background (`selection:bg-emerald-100`) |
-| `emerald-200` | `#A7F3D0` | Form success alert border |
-| `emerald-300` | `#6EE7B7` | Essay card hover border accent |
-| `emerald-900` | `#064E3B` | Text highlight selection foreground (`selection:text-emerald-900`) |
-
-### 2.3 Supporting Coastal & Mineral Accent Tokens (Custom `@theme`)
-
-| CSS Variable | Tailwind Class Example | Hex | Usage |
+| Palette Family | Token / Class | Hex | Usage |
 |---|---|---|---|
-| `--color-pearl` | `bg-pearl` | `#FAF9F6` | Warm off-white feature cards, Bento showcase cards, App directory cards, Essay cards, Waitlist callout, selected sensor cards |
-| `--color-mineral` | `bg-mineral` | `#EEF2F4` | Segmented tab tracks, inactive filter chips, empty Bike Tower bays, secondary button hover state, neutral info tiles |
-| `--color-mineral-line` | `border-mineral-line` | `#D4DEE4` | Subtle cool-stone borders paired with `bg-pearl` and `bg-mineral` surfaces |
-| `--color-ocean` | `text-ocean` / `bg-ocean` | `#0B4F78` | Deep Ocean Blue: Navigation category filter, H₂ E-Bike kicker & link, footer link hover, Medium outbound links, regenerative/hardware numeric readouts |
-| `--color-ocean-deep` | `hover:text-ocean-deep` | `#083A59` | Hover state for Deep Ocean Blue text links |
-| `--color-ocean-mist` | `bg-ocean-mist` | `#EAF2F7` | Soft coastal blue tint for icon boxes (Sensor detail), Weatherproof & Slip-Risk stat cards, Wind & Lighting route card |
-| `--color-ocean-line` | `border-ocean-line` | `#BFD6E4` | Hairline border paired with `bg-ocean-mist` |
-| `--color-seaglass` | `text-seaglass` / `bg-seaglass` | `#1C6E63` | Sea-Glass Green: Tuning & Shifting filter, Ride Experience Mode buttons, Bike Tower kicker & link, Cycle Rickshaw kicker, active energy metrics, essay topic labels |
-| `--color-seaglass-deep` | `hover:text-seaglass-deep` | `#15564D` | Hover state for Sea-Glass text links |
-| `--color-seaglass-mist` | `bg-seaglass-mist` | `#E7F4F1` | Soft sea-glass tint for App Switcher icon box, occupied Bike Tower bays, Gamification/Perk route card |
-| `--color-seaglass-line` | `border-seaglass-line` | `#B6DBD4` | Hairline border paired with `bg-seaglass-mist` |
+| **Pearl** | `bg-pearl` (`--color-pearl`) | `#FAF9F6` | Primary page canvas, sticky header (`bg-pearl/95`), alternating hero/content sections, form input resting fill, open Bike Tower bays |
+| **Pearl (Crisp White)** | `bg-white` | `#FFFFFF` | Elevated content cards, interactive control panels, active segmented tab buttons, secondary buttons |
+| **Mineral Grey** | `bg-mineral` (`--color-mineral`) | `#EEF2F4` | Alternating section bands, footer background, segmented tab tracks, inactive filter chips, media loading containers |
+| **Mineral Soft** | `bg-mineral-soft` (`--color-mineral-soft`) | `#F4F6F8` | Subtle soft-mineral auxiliary surface |
+| **Mineral Line** | `border-mineral-line` (`--color-mineral-line`) | `#D4DEE4` | Section hairlines, header/footer dividers, card borders, input borders, tab track borders |
+| **Slate** | `text-slate-900` / `bg-slate-900` | `#0F172A` | Primary headings (`h1`–`h4`), wordmark, high-emphasis values, dark secondary action buttons |
+| **Slate** | `text-slate-800` | `#1E293B` | Sub-labels, metric titles, secondary button labels |
+| **Slate** | `text-slate-700` | `#334155` | Form labels, list items, inactive mobile links, neutral icons |
+| **Slate** | `text-slate-600` | `#475569` | Body paragraphs, inactive navigation links, secondary icons |
+| **Slate** | `text-slate-500` | `#64748B` | Captions, metadata lines, helper text, footer fine print |
+| **Slate** | `text-slate-400` / `text-slate-300` | `#94A3B8` / `#CBD5E1` | Placeholders, available/empty status labels, disabled button fills (`bg-slate-300`) |
+| **Deep Ocean Blue** | `bg-ocean` / `text-ocean` (`--color-ocean`) | `#0B4F78` | Primary CTA fills, active nav underline, range slider `accent-ocean`, active card borders (`border-2`), focus rings, key telemetry figures, outbound links |
+| **Deep Ocean Blue (Deep)** | `bg-ocean-deep` / `text-ocean-deep` (`--color-ocean-deep`) | `#083A59` | Primary CTA hover fill, active tab text, active nav text, dark button hover, link hover |
+| **Deep Ocean Mist** | `bg-ocean-mist` (`--color-ocean-mist`) | `#E7F1F7` | Active mobile nav fill, text selection background, icon containers, weather/anti-lock stat callouts |
+| **Deep Ocean Line** | `border-ocean-line` (`--color-ocean-line`) | `#B8D2E3` | Hairline borders for `bg-ocean-mist` tiles and hoverable essay/sensor cards |
+| **Sea-Glass Green** | `bg-seaglass` / `text-seaglass` (`--color-seaglass`) | `#1D7A6E` | Sustainability & micro-mobility kickers, check icons, Tuning & Ride Mode active buttons, active energy metrics, occupied Bike Tower icons |
+| **Sea-Glass Deep** | `text-seaglass-deep` (`--color-seaglass-deep`) | `#155E55` | High-contrast Sea-Glass text on mist/pearl cards, hover state for Sea-Glass links, success alert headings |
+| **Sea-Glass Mist** | `bg-seaglass-mist` (`--color-seaglass-mist`) | `#E6F4F1` | Soft sea-glass tint for secured Bike Tower bays, harvested power stat card, App Switcher icon box, gamification/perk card, form success alerts |
+| **Sea-Glass Line** | `border-seaglass-line` (`--color-seaglass-line`) | `#B2DAD2` | Hairline borders paired with `bg-seaglass-mist` |
 
-### 2.4 Semantic Validation Color
+### 2.2 Semantic Validation Color
 
 | Token / Class | Hex | Usage |
 |---|---|---|
 | `text-rose-600` | `#E11D48` | Inline form validation error messages only |
 
-### 2.5 Color Proportions & Rules
-- **~65% Crisp Neutral Canvas**: `#FFFFFF` and `#F8FAFC` with `#0F172A` / `#475569` slate typography.
-- **~15% Soft Secondary Surfaces**: `Pearl (#FAF9F6)` and `Mineral (#EEF2F4)` for featured cards, controls, and recessed panels.
-- **~12% Emerald Primary**: All main CTAs (`Plan a Ride`, `Explore Smartphone Fusion`, `Park Bike in Tower`, `Request Updates`, `Send Message`), active nav underlines, primary kickers, and slider tracks.
-- **~8% Coastal Accents (`Ocean` & `Sea-Glass`)**: Used intentionally to distinguish parallel pillars (e.g., *Emerald* = Brakes/Safety, *Sea-Glass* = Bike Tower/Tuning/Active Energy, *Deep Ocean* = H₂ Concept/Navigation/Weather/External Links). Never stack all three vivid accent fills side-by-side as competing buttons unless they represent distinct filter categories.
+### 2.3 Color Balance Rules
+- **~50% Pearl & Crisp White (`#FAF9F6` / `#FFFFFF`)**: Sunlit primary sections and card surfaces.
+- **~25% Mineral Grey (`#EEF2F4` / `#D4DEE4`)**: Alternating section bands, footer, tracks, and hairline borders.
+- **~10% Slate (`#0F172A`–`#64748B`)**: Crisp editorial typography and neutral secondary emphasis.
+- **~9% Deep Ocean Blue (`#0B4F78` / `#083A59` / `#E7F1F7`)**: Primary actions, navigation authority, sliders, and active focus states.
+- **~6% Sea-Glass Green (`#1D7A6E` / `#155E55` / `#E6F4F1`)**: Eco-impact highlights, energy harvest readouts, secured states, and positive confirmations.
 
 ---
 
@@ -83,8 +63,7 @@ AshBike's design language embodies **Sunlit Civic Mobility**: crisp daylight cla
 
 ### 3.1 Font Families & Loading
 
-AshBike uses a three-font Google Fonts pairing:
-- **Display (`--font-display`)**: **Outfit** (weights `400, 500, 600, 700`) — geometric, friendly, architectural headlines and large stat figures.
+- **Display (`--font-display`)**: **Outfit** (weights `400, 500, 600, 700`) — geometric, architectural headlines and large stat figures.
 - **Body (`--font-sans`)**: **Plus Jakarta Sans** (weights `400, 500, 600, 700`) — crisp, highly legible UI copy and prose.
 - **Monospace (`--font-mono`)**: **JetBrains Mono** (weights `400, 500`) — sensor telemetry, elevation/distance readouts, wattage, bay counters, and slider bounds.
 
@@ -106,8 +85,8 @@ AshBike uses a three-font Google Fonts pairing:
 | **Section H2** | Outfit | `font-display text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight` | `text-wrap: balance` applied |
 | **Feature Card H3** | Outfit | `font-display text-2xl font-bold text-slate-900 tracking-tight` | Bento pillars, spotlights, active detail panels |
 | **Compact Card H3** | Outfit | `font-display text-lg font-semibold text-slate-900` | Grid cards (benefits, sensors, commerce, rickshaws) |
-| **Section Kicker** | Plus Jakarta Sans | `text-sm font-medium text-emerald-700` (or `text-ocean` / `text-seaglass`) | Numbered editorial prefix: `01. Core Architecture` |
-| **Card Kicker** | Plus Jakarta Sans | `text-xs font-medium text-slate-500` (or `text-emerald-700` / `text-seaglass` / `text-ocean`) | Plain text, middle-dot separated (`Urban Parking · Micro-Mobility`) |
+| **Section Kicker** | Plus Jakarta Sans | `text-sm font-medium text-ocean` or `text-seaglass` | Numbered editorial prefix: `01. Core Architecture` |
+| **Card Kicker** | Plus Jakarta Sans | `text-xs font-medium text-ocean` or `text-seaglass` | Plain text, middle-dot separated (`Urban Parking · Micro-Mobility`) |
 | **Hero Lead Copy** | Plus Jakarta Sans | `text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl` | Generous line height |
 | **Standard Body** | Plus Jakarta Sans | `text-sm text-slate-600 leading-relaxed` | Card descriptions & legal prose |
 | **Metadata / Footnote** | Plus Jakarta Sans | `text-xs text-slate-500` | Platform lists, helper hints, timestamps |
@@ -125,7 +104,7 @@ Every section, header, and footer aligns strictly to a centered `1280px` contain
 ```
 
 ### 4.2 Alternating Section Cadence
-Sections alternate between `bg-white` and `bg-slate-50` separated by `border-b border-slate-200` (the final section before the `bg-slate-50` footer may omit `border-b` if the footer supplies `border-t border-slate-200`).
+Sections alternate between `bg-pearl` and `bg-mineral`, separated by `border-b border-mineral-line`.
 
 | Section Type | Vertical Padding |
 |---|---|
@@ -136,28 +115,26 @@ Sections alternate between `bg-white` and `bg-slate-50` separated by `border-b b
 | Footer | `py-14` |
 
 ### 4.3 Core Responsive Grid Patterns
-- **Split Hero (12-col)**: `grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch` — left `lg:col-span-6` text column (`flex flex-col justify-between space-y-8`) matched in height with right `lg:col-span-6` photography container (`min-h-[300px] lg:min-h-[440px]`).
-- **4-Column Impact Strip**: `mt-12 pt-8 border-t border-slate-200 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8` anchored beneath the hero above the fold.
+- **Split Hero (12-col)**: `grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch` — left `lg:col-span-6` text column matched in height with right `lg:col-span-6` media frame (`min-h-[300px] lg:min-h-[440px]`).
+- **4-Column Impact Strip**: `mt-12 pt-8 border-t border-mineral-line grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8`.
 - **Asymmetric Bento Grid**: `grid grid-cols-1 lg:grid-cols-3 gap-6` combining two `lg:col-span-2` split image+copy cards (`bg-pearl`) with two `lg:col-span-1` editorial cards (`bg-white`).
-- **Interactive Master-Detail / Calculator (5/7 split)**: `grid grid-cols-1 lg:grid-cols-12 gap-8` (or `gap-10`), pairing a `lg:col-span-5` control panel (or sticky detail inspector `sticky top-24`) with a `lg:col-span-7` result grid or readout card.
-- **4-Column Editorial Cards**: `grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6` for uniform benefit grids.
-- **3-Column Directory Grid**: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6` for Apps and Essays.
+- **Interactive Master-Detail / Calculator (5/7 split)**: `grid grid-cols-1 lg:grid-cols-12 gap-8` (or `gap-10`).
+- **4-Column Editorial Cards**: `grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6`.
+- **3-Column Directory Grid**: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6`.
 
 ---
 
 ## 5. Elevation, Borders & Corner Radii
 
-AshBike deliberately avoids glowing drop shadows and glassmorphic clutter.
-
 | Element | Border | Radius | Shadow |
 |---|---|---|---|
-| Sticky Navbar | `border-b border-slate-200` | none | none (`bg-white/95 backdrop-blur-md`) |
-| Major Cards & Media Frames | `border border-slate-200` or `border-mineral-line` | `rounded-2xl` (`16px`) | none |
-| Selected Interactive Card | `border-2 border-emerald-600` | `rounded-2xl` (`16px`) | none |
+| Sticky Navbar | `border-b border-mineral-line` | none | none (`bg-pearl/95 backdrop-blur-md`) |
+| Major Cards & Media Frames | `border border-mineral-line` | `rounded-2xl` (`16px`) | none |
+| Selected Interactive Card | `border-2 border-ocean` | `rounded-2xl` (`16px`) | none |
 | Nested Stat / Info Callouts | `border-mineral-line` / `border-ocean-line` / `border-seaglass-line` | `rounded-xl` (`12px`) | none |
-| Buttons, Inputs & Filter Chips | None (solid) or `border-slate-200` / `border-slate-300` | `rounded-xl` (`12px`) | none |
+| Buttons, Inputs & Filter Chips | None (solid) or `border-mineral-line` | `rounded-xl` (`12px`) | none |
 | Icon Containers (`44px`–`48px`) | `border-ocean-line` or `border-seaglass-line` | `rounded-xl` (`12px`) | none |
-| Segmented Tab Track | `border border-mineral-line` or `border-slate-200` (`p-1.5` / `p-1`) | `rounded-xl` (`12px`) | none |
+| Segmented Tab Track | `border border-mineral-line` (`p-1.5` / `p-1`) | `rounded-xl` (`12px`) | none |
 | Active Segmented Tab Button | none | `rounded-lg` (`8px`) | `shadow-sm` (only shadow in system) |
 
 ---
@@ -165,127 +142,89 @@ AshBike deliberately avoids glowing drop shadows and glassmorphic clutter.
 ## 6. Component Blueprints
 
 ### 6.1 Three-Zone Sticky Navbar
-- **Height**: `h-16` (`64px`), `sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200`.
-- **Zone 1 (Left)**: Plain typographic wordmark (`font-display text-xl font-bold tracking-tight text-slate-900 whitespace-nowrap shrink-0`) — no accompanying icon or tagline.
-- **Zone 2 (Center)**: Exactly 5 concise single-line links (`gap-7 text-sm font-medium text-slate-600 hover:text-slate-900 whitespace-nowrap shrink-0`). Active state uses an Emerald underline:
-  `text-slate-900 underline decoration-emerald-600 decoration-2 underline-offset-8`.
-- **Zone 3 (Right)**: Single primary Emerald button (`Plan a Ride`) on `sm+` screens, plus a `44×44px` (`w-11 h-11`) mobile menu button on `< md` viewports.
-- **Mobile Drawer**: Full-width white dropdown (`border-t border-slate-200 bg-white px-4 py-4 space-y-2`) with active links highlighted in `bg-emerald-50 text-emerald-800 font-semibold`.
+- **Height**: `h-16` (`64px`), `sticky top-0 z-40 bg-pearl/95 backdrop-blur-md border-b border-mineral-line`.
+- **Zone 1 (Left)**: Plain typographic wordmark (`font-display text-xl font-bold tracking-tight text-slate-900 whitespace-nowrap shrink-0`).
+- **Zone 2 (Center)**: 5 single-line links (`gap-7 text-sm font-medium text-slate-600 hover:text-ocean`). Active state: `text-ocean-deep underline decoration-ocean decoration-2 underline-offset-8`.
+- **Zone 3 (Right)**: Single primary Deep Ocean CTA (`bg-ocean hover:bg-ocean-deep`) on `sm+` screens, plus a `44×44px` (`w-11 h-11`) mobile menu button on `< md`.
+- **Mobile Drawer**: `border-t border-mineral-line bg-pearl px-4 py-4 space-y-2`; active mobile link uses `bg-ocean-mist text-ocean-deep font-semibold`.
 
 ### 6.2 Buttons & Links
 
 ```html
-<!-- Primary CTA (Emerald) -->
-<button class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-300 disabled:cursor-not-allowed rounded-xl transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2">
+<!-- Primary CTA (Deep Ocean Blue) -->
+<button class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-ocean hover:bg-ocean-deep disabled:bg-slate-300 disabled:cursor-not-allowed rounded-xl transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ocean focus-visible:ring-offset-2">
   <mat-icon class="!text-[18px] !w-[18px] !h-[18px] leading-none">explore</mat-icon>
   <span>Primary Action</span>
 </button>
 
 <!-- Secondary Neutral Button -->
-<button class="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-slate-800 bg-slate-50 hover:bg-mineral border border-slate-200 rounded-xl transition-colors whitespace-nowrap shrink-0">
+<button class="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-slate-800 bg-white hover:bg-mineral border border-mineral-line rounded-xl transition-colors whitespace-nowrap shrink-0">
   <span>Secondary Action</span>
   <mat-icon class="!text-[18px] !w-[18px] !h-[18px] leading-none">arrow_forward</mat-icon>
 </button>
 
-<!-- Dark Slate Emphasis Action (inside neutral cards) -->
-<a class="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-xl transition-colors whitespace-nowrap shrink-0">
+<!-- Dark Slate Emphasis Action -->
+<a class="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-semibold text-white bg-slate-900 hover:bg-ocean-deep rounded-xl transition-colors whitespace-nowrap shrink-0">
   <span>Open Architecture</span>
   <mat-icon class="!text-[18px] !w-[18px] !h-[18px] leading-none">arrow_forward</mat-icon>
 </a>
 
-<!-- Inline Editorial Directional Link (Emerald / Sea-Glass / Ocean) -->
-<a class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-800 transition-colors">
-  <span>Inspect Sensor Suite</span>
-  <mat-icon class="!text-[18px] !w-[18px] !h-[18px] leading-none">arrow_forward</mat-icon>
-</a>
+<!-- Inline Editorial Directional Links -->
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-ocean hover:text-ocean-deep transition-colors">...</a>
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-seaglass hover:text-seaglass-deep transition-colors">...</a>
 ```
 
 ### 6.3 Cards & Tinted Callouts
-- **Standard White Card**: `bg-white rounded-2xl border border-slate-200 p-6` (or `p-7 sm:p-8` for major blocks).
-- **Pearl Editorial / Bento Card**: `bg-pearl rounded-2xl border border-mineral-line p-6` (hoverable essay cards add `hover:bg-white hover:border-emerald-300 transition-colors`).
-- **Tinted Coastal Sub-Cards** (used inside simulators & configurators for 3-way semantic differentiation):
-  - **Deep Ocean Mist**: `p-4 rounded-xl bg-ocean-mist border border-ocean-line` (text highlight: `text-ocean`).
-  - **Mineral Neutral**: `p-4 rounded-xl bg-mineral border border-mineral-line` (text highlight: `text-slate-900`).
-  - **Sea-Glass Mist**: `p-4 rounded-xl bg-seaglass-mist border border-seaglass-line` (text highlight: `text-seaglass`).
+- **Elevated Card**: `bg-white rounded-2xl border border-mineral-line p-6` (or `p-7 sm:p-8`).
+- **Warm Pearl Feature Card** (inside `bg-mineral` bands): `bg-pearl rounded-2xl border border-mineral-line`.
+- **Tinted Coastal Sub-Cards**:
+  - **Deep Ocean Mist**: `p-4 rounded-xl bg-ocean-mist border border-ocean-line` (accent text: `text-ocean`).
+  - **Mineral Neutral**: `p-4 rounded-xl bg-mineral border border-mineral-line` (accent text: `text-slate-900`).
+  - **Sea-Glass Mist**: `p-4 rounded-xl bg-seaglass-mist border border-seaglass-line` (accent text: `text-seaglass-deep`).
 
 ### 6.4 Segmented Tabs & Multi-Accent Filter Chips
-- **Segmented Track**: `flex flex-wrap items-center gap-1.5 p-1.5 bg-mineral rounded-xl border border-mineral-line`.
-  - Active Tab: `px-3.5 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-white text-slate-900 shadow-sm whitespace-nowrap shrink-0`.
-  - Inactive Tab: `px-3.5 py-2 text-xs sm:text-sm font-medium rounded-lg text-slate-600 hover:text-slate-900 whitespace-nowrap shrink-0`.
-- **White Track Variant** (when placed on `bg-slate-50`): Track is `bg-white rounded-xl border border-slate-200 p-1.5`, active tab is `bg-emerald-600 text-white rounded-lg`.
-- **Category Filter Chips**: Inactive chips use `bg-mineral text-slate-700 hover:bg-slate-200 rounded-xl px-4 py-2 text-xs font-medium`. Active chips map semantically:
+- **Mineral Track** (on `bg-pearl` / `bg-white`): `p-1.5 bg-mineral rounded-xl border border-mineral-line`, active tab `bg-white text-ocean-deep shadow-sm rounded-lg`.
+- **White Track** (on `bg-mineral` sections): `p-1.5 bg-white rounded-xl border border-mineral-line`, active tab `bg-ocean text-white rounded-lg`.
+- **Category Filter Chips**: Inactive chips use `bg-mineral text-slate-700 hover:bg-mineral-line/60 rounded-xl`. Active chips map semantically:
   - All / Surface: `bg-slate-900 text-white`
-  - Safety / Terrain: `bg-emerald-600 text-white`
+  - Safety / Terrain: `bg-ocean text-white`
   - Tuning / Ride Mode: `bg-seaglass text-white`
-  - Navigation: `bg-ocean text-white`
+  - Navigation: `bg-ocean-deep text-white`
 
 ### 6.5 Sliders & Form Controls
-- **Range Slider**: Native `<input type="range">` styled with `w-full accent-emerald-600 cursor-pointer`, paired with a top-right `font-mono text-xl sm:text-2xl font-bold text-emerald-700 tabular-nums` readout and a 3-point `font-mono text-xs text-slate-500` scale beneath.
-- **Text / Email / Select / Textarea Inputs**:
-  `w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-xl text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-600`
+- **Range Slider**: `w-full accent-ocean cursor-pointer`, paired with `font-mono text-xl sm:text-2xl font-bold text-ocean tabular-nums`.
+- **Inputs / Select / Textarea**: `w-full px-3.5 py-2.5 text-sm bg-pearl border border-mineral-line rounded-xl text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-ocean focus:bg-white`.
 - **Validation Error**: `text-xs text-rose-600 mt-1`.
-- **Success State**: `p-5 rounded-xl bg-emerald-50/70 border border-emerald-200` with `text-emerald-800` icon + title and underlined reset action.
+- **Success State**: `p-5 rounded-xl bg-seaglass-mist border border-seaglass-line` with `text-seaglass-deep` icon + heading and `text-ocean underline` reset button.
 
 ### 6.6 Resilient Media & Video Containers
-- **Photo Frame**: `rounded-2xl overflow-hidden border border-slate-200 bg-slate-100`.
-- **Image Element**: `w-full h-full object-cover transition-transform duration-500 ease-out` with `referrerpolicy="no-referrer"`.
-- **Fallback State**: Soft coastal gradient `bg-gradient-to-br from-pearl via-emerald-50/40 to-ocean-mist` with centered `text-emerald-600` `directions_bike` icon and caption.
-- **Embedded Video Frame**: White outer card (`bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 space-y-4`) with title + outbound YouTube link on top and `aspect-video w-full rounded-xl overflow-hidden bg-slate-100 border border-slate-200` below.
+- **Photo Frame**: `rounded-2xl overflow-hidden border border-mineral-line bg-mineral`.
+- **Fallback State**: `bg-gradient-to-br from-pearl via-seaglass-mist to-ocean-mist` with centered `text-ocean` `directions_bike` icon.
+- **Video Card**: `bg-white rounded-2xl border border-mineral-line p-5 sm:p-7 space-y-4` containing `aspect-video w-full rounded-xl overflow-hidden bg-mineral border border-mineral-line`.
 
 ### 6.7 Footer
-- `border-t border-slate-200 bg-slate-50 text-slate-600`.
-- 12-column grid (`md:col-span-5` brand summary, `md:col-span-2` Platform, `md:col-span-3` Concepts & Apps, `md:col-span-2` Info & Legal).
-- All footer links transition to Deep Ocean Blue on hover (`hover:text-ocean transition-colors`).
-- Bottom legal bar separated by `mt-12 pt-6 border-t border-slate-200` in `text-xs text-slate-500`.
+- `border-t border-mineral-line bg-mineral text-slate-600`, 12-col grid (`5/2/3/2`), links hover to `hover:text-ocean transition-colors`, bottom bar separated by `border-t border-mineral-line`.
 
 ---
 
 ## 7. Iconography, Photography & Brand Assets
 
-### 7.1 Icons
-- **Library**: Google Material Icons (`@import url('https://fonts.googleapis.com/icon?family=Material+Icons');`).
-- **Button Icons**: Always explicitly sized to `!text-[18px] !w-[18px] !h-[18px] leading-none` (or `19px` on hero CTA) so icons never misalign vertically with `14px` button text.
-- **Inline Check / External Link Icons**: `!text-[15px]`–`!text-[16px]`.
-- **Card Feature Icons**: Default `24px` (`mat-icon`), colored via `text-emerald-600`, `text-ocean`, `text-seaglass`, or `text-slate-700`.
-- **Icon Containers** (featured panels): `w-11 h-11` or `w-12 h-12 rounded-xl` with matching mist background and line border (`bg-seaglass-mist border-seaglass-line text-seaglass` or `bg-ocean-mist border-ocean-line text-ocean`).
-
-### 7.2 Photography Art Direction
-To match the site's sunlit atmosphere, all photography should follow:
-- **Lighting**: Bright, natural morning or midday sunlight with warm highlights and soft architectural shadows.
-- **Palette**: Light stone plazas, lush park greens, brushed aluminum/matte charcoal bicycle frames, clear blue skies.
-- **Composition**: Clean, uncluttered framing; `16:9` for hero banners, `4:3` for technology/hardware/city feature cards.
-- **Avoid**: Night scenes, neon glow, moody dark studios, oversaturated HDR, or floating sci-fi holograms.
-
-### 7.3 Brand Mark / Favicon
-- Winged bicycle wheel emblem (`/assets/aistudio/image_b0b3173d.png` and `/favicon.ico`) used for browser tabs and Apple touch icons, while the top navbar intentionally remains a crisp text-only **AshBike** wordmark.
+- **Icons**: Google Material Icons (`Material Icons` font). Button icons: `!text-[18px] !w-[18px] !h-[18px] leading-none`. Inline checks/external links: `15px–16px`. Standalone card icons: default `24px` in `text-ocean`, `text-seaglass`, or `text-slate-700`.
+- **Photography Art Direction**: Bright natural daylight, light architectural stone, lush greenery, clean matte frames, `16:9` hero and `4:3` feature crops.
+- **Favicon**: Winged bicycle wheel emblem (`/assets/aistudio/image_b0b3173d.png` & `/favicon.ico`); top navbar stays a crisp text-only **AshBike** wordmark.
 
 ---
 
-## 8. Motion & Accessibility Standards
+## 8. Motion, Accessibility & Anti-Patterns
 
-- **Transitions**: Subtle `transition-colors` on buttons, cards, and links; `transition-transform duration-500 ease-out` on media images. No jarring bounce or parallax animations.
-- **Reduced Motion**: Global `@media (prefers-reduced-motion: reduce)` rule collapses all animation/transition durations to `0.01ms` and disables smooth scrolling.
-- **Focus Visibility**: All interactive anchors and buttons expose `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600` (with `focus-visible:ring-offset-2` on solid filled buttons).
-- **Touch Targets**: Mobile controls maintain at least `44×44px` (`w-11 h-11`).
-- **Semantics**: Native `<header>`, `<nav aria-label="...">`, `<main>`, `<footer>`, `role="tablist"`/`role="tab"`/`aria-selected`, and explicit `<label for="...">` bindings on every input and slider.
+- **Transitions**: `transition-colors` on controls; `transition-transform duration-500 ease-out` on media; global `@media (prefers-reduced-motion: reduce)` override.
+- **Focus Rings**: `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ocean`.
+- **Anti-Patterns**: No dark mode, no decorative `rounded-full` metadata pills, no `border-l-4` accent bars, no heavy card drop shadows (`shadow-lg`/`shadow-xl`), no pulsing status dots, no `gray-*` utilities.
 
 ---
 
-## 9. Anti-Patterns (Do Not Use)
+## 9. Copy-Paste Starter Setup (Tailwind CSS v4)
 
-To keep any replica faithful to AshBike:
-- **No Dark Mode**: Never invert the page to dark slate/black canvases.
-- **No Decorative Pills**: Do not wrap kickers, dates, platforms, or tags in `rounded-full` colored pill badges.
-- **No Left-Border Accent Stripes**: Avoid `border-l-4 border-emerald-600` callout bars.
-- **No Heavy Shadows**: Never apply `shadow-lg`, `shadow-xl`, or colored glow shadows to cards.
-- **No Pulsing Status Dots**: Avoid `animate-pulse` / `animate-ping` live-indicator dots.
-- **No `gray-*` Utilities**: Always use `slate-*` neutrals alongside the custom `pearl` and `mineral` tokens.
-
----
-
-## 10. Copy-Paste Starter Setup (Tailwind CSS v4)
-
-### `src/styles.css`
 ```css
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import "tailwindcss";
@@ -297,17 +236,18 @@ To keep any replica faithful to AshBike:
 
   --color-pearl: #FAF9F6;
   --color-mineral: #EEF2F4;
+  --color-mineral-soft: #F4F6F8;
   --color-mineral-line: #D4DEE4;
 
   --color-ocean: #0B4F78;
   --color-ocean-deep: #083A59;
-  --color-ocean-mist: #EAF2F7;
-  --color-ocean-line: #BFD6E4;
+  --color-ocean-mist: #E7F1F7;
+  --color-ocean-line: #B8D2E3;
 
-  --color-seaglass: #1C6E63;
-  --color-seaglass-deep: #15564D;
-  --color-seaglass-mist: #E7F4F1;
-  --color-seaglass-line: #B6DBD4;
+  --color-seaglass: #1D7A6E;
+  --color-seaglass-deep: #155E55;
+  --color-seaglass-mist: #E6F4F1;
+  --color-seaglass-line: #B2DAD2;
 }
 
 @layer base {
@@ -315,7 +255,7 @@ To keep any replica faithful to AshBike:
     font-family: var(--font-sans);
     scroll-behavior: smooth;
     color-scheme: light;
-    background-color: #ffffff;
+    background-color: #FAF9F6;
     color: #0f172a;
   }
 
@@ -342,7 +282,6 @@ To keep any replica faithful to AshBike:
 }
 ```
 
-### `<body>` Baseline Class
 ```html
-<body class="bg-white text-slate-900 antialiased selection:bg-emerald-100 selection:text-emerald-900">
+<body class="bg-pearl text-slate-900 antialiased selection:bg-ocean-mist selection:text-ocean-deep">
 ```

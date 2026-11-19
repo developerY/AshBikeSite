@@ -6,7 +6,7 @@ import {MatIconModule} from '@angular/material/icon';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [MatIconModule],
   template: `
-    <div class="relative w-full h-full overflow-hidden bg-slate-100" [class]="wrapperClass()">
+    <div class="relative w-full h-full overflow-hidden bg-mineral" [class]="wrapperClass()">
       @if (!failed()) {
         <img
           [src]="src()"
@@ -18,9 +18,9 @@ import {MatIconModule} from '@angular/material/icon';
         />
       } @else {
         <div
-          class="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-pearl via-emerald-50/40 to-ocean-mist text-slate-600"
+          class="w-full h-full min-h-[220px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-pearl via-seaglass-mist to-ocean-mist text-slate-600"
         >
-          <mat-icon class="text-emerald-600 mb-2">directions_bike</mat-icon>
+          <mat-icon class="text-ocean mb-2">directions_bike</mat-icon>
           <p class="text-sm font-medium text-slate-800">{{ fallbackTitle() || alt() }}</p>
           <p class="text-xs text-slate-500 mt-1">AshBike Visual Showcase</p>
         </div>

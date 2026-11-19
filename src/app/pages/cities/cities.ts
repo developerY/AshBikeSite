@@ -19,11 +19,11 @@ interface TowerSlot {
   imports: [MatIconModule, ResilientImage],
   template: `
     <!-- Cities & Rethinking Biking Hero -->
-    <section class="bg-white border-b border-slate-200 py-14 lg:py-20">
+    <section class="bg-pearl border-b border-mineral-line py-14 lg:py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
           <div class="lg:col-span-6 flex flex-col justify-center space-y-5">
-            <p class="text-sm font-medium text-emerald-700">
+            <p class="text-sm font-medium text-seaglass">
               Sustainability · Rethinking Biking & Cities
             </p>
             <h1 class="font-display text-4xl sm:text-5xl font-bold text-slate-900 tracking-tight leading-[1.08]">
@@ -40,7 +40,7 @@ interface TowerSlot {
           </div>
 
           <div class="lg:col-span-6">
-            <div class="h-full min-h-[280px] rounded-2xl overflow-hidden border border-slate-200 bg-slate-100">
+            <div class="h-full min-h-[280px] rounded-2xl overflow-hidden border border-mineral-line bg-mineral">
               <app-resilient-image
                 [src]="images.city"
                 alt="Happy cyclists riding along a sunny tree-lined street beside outdoor cafes and micro-mobility hub"
@@ -55,12 +55,12 @@ interface TowerSlot {
     </section>
 
     <!-- Interactive Vertical Bike Tower ("PEZ Dispenser") -->
-    <section class="bg-slate-50 border-b border-slate-200 py-16 lg:py-24">
+    <section class="bg-mineral border-b border-mineral-line py-16 lg:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           <div class="lg:col-span-6 space-y-6">
             <div class="space-y-3">
-              <p class="text-sm font-medium text-emerald-700">
+              <p class="text-sm font-medium text-ocean">
                 01. Vertical Bike Parking · Bike Tower
               </p>
               <h2 class="font-display text-3xl font-bold text-slate-900 tracking-tight">
@@ -75,12 +75,12 @@ interface TowerSlot {
             </div>
 
             <div class="grid grid-cols-2 gap-4">
-              <div class="bg-white rounded-xl border border-slate-200 p-4">
-                <p class="text-xs text-slate-500">Sidewalk Space Saved</p>
-                <p class="font-display text-2xl font-bold text-emerald-700 tabular-nums mt-0.5">
+              <div class="bg-seaglass-mist rounded-xl border border-seaglass-line p-4">
+                <p class="text-xs text-slate-600">Sidewalk Space Saved</p>
+                <p class="font-display text-2xl font-bold text-seaglass-deep tabular-nums mt-0.5">
                   90% Less
                 </p>
-                <p class="text-xs text-slate-500 mt-0.5">Minimal ground footprint</p>
+                <p class="text-xs text-slate-600 mt-0.5">Minimal ground footprint</p>
               </div>
               <div class="bg-ocean-mist rounded-xl border border-ocean-line p-4">
                 <p class="text-xs text-slate-600">Protection</p>
@@ -96,7 +96,7 @@ interface TowerSlot {
                 type="button"
                 (click)="parkBike()"
                 [disabled]="occupiedCount() >= 8"
-                class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-300 disabled:cursor-not-allowed rounded-xl transition-colors whitespace-nowrap"
+                class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-ocean hover:bg-ocean-deep disabled:bg-slate-300 disabled:cursor-not-allowed rounded-xl transition-colors whitespace-nowrap"
               >
                 <mat-icon class="!text-[18px] !w-[18px] !h-[18px] leading-none">
                   arrow_upward
@@ -107,7 +107,7 @@ interface TowerSlot {
                 type="button"
                 (click)="retrieveBike()"
                 [disabled]="occupiedCount() === 0"
-                class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-slate-800 bg-white hover:bg-mineral border border-slate-200 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl transition-colors whitespace-nowrap"
+                class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-slate-800 bg-white hover:bg-pearl border border-mineral-line disabled:opacity-50 disabled:cursor-not-allowed rounded-xl transition-colors whitespace-nowrap"
               >
                 <mat-icon class="!text-[18px] !w-[18px] !h-[18px] leading-none">
                   arrow_downward
@@ -117,15 +117,15 @@ interface TowerSlot {
             </div>
           </div>
 
-          <div class="lg:col-span-6 bg-white rounded-2xl border border-slate-200 p-6 sm:p-8">
-            <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-5">
+          <div class="lg:col-span-6 bg-white rounded-2xl border border-mineral-line p-6 sm:p-8">
+            <div class="flex items-center justify-between pb-4 border-b border-mineral-line mb-5">
               <div>
                 <h3 class="font-display text-lg font-bold text-slate-900">
                   Live Bike Tower Stack
                 </h3>
                 <p class="text-xs text-slate-500">{{ towerMessage() }}</p>
               </div>
-              <span class="font-mono text-sm font-semibold text-emerald-700 tabular-nums">
+              <span class="font-mono text-sm font-semibold text-ocean tabular-nums">
                 {{ occupiedCount() }} / 8 Bays
               </span>
             </div>
@@ -136,7 +136,7 @@ interface TowerSlot {
                   [class]="
                     bay.occupied
                       ? 'flex items-center justify-between px-4 py-3 rounded-xl bg-seaglass-mist border border-seaglass-line transition-colors'
-                      : 'flex items-center justify-between px-4 py-3 rounded-xl bg-mineral border border-mineral-line transition-colors'
+                      : 'flex items-center justify-between px-4 py-3 rounded-xl bg-pearl border border-mineral-line transition-colors'
                   "
                 >
                   <div class="flex items-center gap-3">
@@ -146,7 +146,7 @@ interface TowerSlot {
                     <mat-icon
                       [class]="
                         bay.occupied
-                          ? 'text-emerald-600 !text-[19px] !w-[19px] !h-[19px]'
+                          ? 'text-seaglass !text-[19px] !w-[19px] !h-[19px]'
                           : 'text-slate-300 !text-[19px] !w-[19px] !h-[19px]'
                       "
                     >
@@ -159,7 +159,7 @@ interface TowerSlot {
                   <span
                     [class]="
                       bay.occupied
-                        ? 'text-xs font-medium text-seaglass'
+                        ? 'text-xs font-medium text-seaglass-deep'
                         : 'text-xs text-slate-400'
                     "
                   >
@@ -172,7 +172,7 @@ interface TowerSlot {
         </div>
 
         <!-- Bike Tower Concept Video -->
-        <div class="mt-10 bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 space-y-4">
+        <div class="mt-10 bg-white rounded-2xl border border-mineral-line p-5 sm:p-7 space-y-4">
           <div class="flex flex-wrap items-center justify-between gap-3">
             <div>
               <h3 class="font-display text-lg font-bold text-slate-900">
@@ -186,7 +186,7 @@ interface TowerSlot {
               href="https://youtu.be/Nk4CwEw4rw8"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 hover:text-emerald-800 transition-colors whitespace-nowrap"
+              class="inline-flex items-center gap-1.5 text-xs font-semibold text-ocean hover:text-ocean-deep transition-colors whitespace-nowrap"
             >
               <span>Watch on YouTube</span>
               <mat-icon class="!text-[16px] !w-[16px] !h-[16px] leading-none">
@@ -195,7 +195,7 @@ interface TowerSlot {
             </a>
           </div>
 
-          <div class="aspect-video w-full rounded-xl overflow-hidden bg-slate-100 border border-slate-200">
+          <div class="aspect-video w-full rounded-xl overflow-hidden bg-mineral border border-mineral-line">
             <iframe
               class="w-full h-full"
               src="https://www.youtube.com/embed/Nk4CwEw4rw8"
@@ -211,12 +211,12 @@ interface TowerSlot {
     </section>
 
     <!-- Local Business & Cycle Rickshaws -->
-    <section class="bg-white border-b border-slate-200 py-16 lg:py-20">
+    <section class="bg-pearl border-b border-mineral-line py-16 lg:py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         <!-- How Bike Traffic Boosts Local Businesses -->
         <div>
           <div class="max-w-2xl mb-10 space-y-2">
-            <p class="text-sm font-medium text-emerald-700">02. Thriving Commercial Districts</p>
+            <p class="text-sm font-medium text-ocean">02. Thriving Commercial Districts</p>
             <h2 class="font-display text-3xl font-bold text-slate-900 tracking-tight">
               How bike traffic boosts local businesses.
             </h2>
@@ -224,7 +224,7 @@ interface TowerSlot {
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             @for (item of commerce; track item.title) {
-              <div class="bg-pearl rounded-2xl border border-mineral-line p-6 space-y-2.5">
+              <div class="bg-white rounded-2xl border border-mineral-line p-6 space-y-2.5">
                 <h3 class="font-display text-lg font-semibold text-slate-900">{{ item.title }}</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">{{ item.description }}</p>
               </div>
@@ -233,7 +233,7 @@ interface TowerSlot {
         </div>
 
         <!-- Cycle Rickshaws / Bike Cabs -->
-        <div class="pt-10 border-t border-slate-200">
+        <div class="pt-10 border-t border-mineral-line">
           <div class="max-w-2xl mb-10 space-y-2">
             <p class="text-sm font-medium text-seaglass">
               03. Micro-Mobility · Cycle Rickshaws
@@ -249,7 +249,7 @@ interface TowerSlot {
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             @for (pt of rickshaws; track pt.title) {
-              <div class="bg-white rounded-2xl border border-slate-200 p-6 space-y-2.5">
+              <div class="bg-white rounded-2xl border border-mineral-line p-6 space-y-2.5">
                 <h3 class="font-display text-lg font-semibold text-slate-900">{{ pt.title }}</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">{{ pt.description }}</p>
               </div>
@@ -260,23 +260,23 @@ interface TowerSlot {
     </section>
 
     <!-- City Spotlights: LA 28x28 & New York -->
-    <section class="bg-slate-50 py-16 lg:py-20">
+    <section class="bg-mineral py-16 lg:py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-8">
           <div class="space-y-2">
-            <p class="text-sm font-medium text-emerald-700">04. City Spotlights</p>
+            <p class="text-sm font-medium text-ocean">04. City Spotlights</p>
             <h2 class="font-display text-3xl font-bold text-slate-900 tracking-tight">
               Reimagining major corridors in Los Angeles & New York.
             </h2>
           </div>
 
-          <div class="flex items-center gap-1.5 p-1.5 bg-white rounded-xl border border-slate-200 shrink-0">
+          <div class="flex items-center gap-1.5 p-1.5 bg-white rounded-xl border border-mineral-line shrink-0">
             <button
               type="button"
               (click)="activeCity.set('la')"
               [class]="
                 activeCity() === 'la'
-                  ? 'px-4 py-2 text-xs font-semibold rounded-lg bg-emerald-600 text-white whitespace-nowrap'
+                  ? 'px-4 py-2 text-xs font-semibold rounded-lg bg-ocean text-white whitespace-nowrap'
                   : 'px-4 py-2 text-xs font-medium rounded-lg text-slate-600 hover:text-slate-900 whitespace-nowrap'
               "
             >
@@ -287,7 +287,7 @@ interface TowerSlot {
               (click)="activeCity.set('ny')"
               [class]="
                 activeCity() === 'ny'
-                  ? 'px-4 py-2 text-xs font-semibold rounded-lg bg-emerald-600 text-white whitespace-nowrap'
+                  ? 'px-4 py-2 text-xs font-semibold rounded-lg bg-ocean text-white whitespace-nowrap'
                   : 'px-4 py-2 text-xs font-medium rounded-lg text-slate-600 hover:text-slate-900 whitespace-nowrap'
               "
             >
@@ -297,7 +297,7 @@ interface TowerSlot {
         </div>
 
         @if (activeCity() === 'la') {
-          <div class="bg-white rounded-2xl border border-slate-200 p-7 sm:p-9 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-2xl border border-mineral-line p-7 sm:p-9 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="space-y-3">
               <p class="text-xs font-medium text-ocean">LA Metro Initiative</p>
               <h3 class="font-display text-2xl font-bold text-slate-900">
@@ -309,7 +309,7 @@ interface TowerSlot {
                 sports venues and civic plazas.
               </p>
             </div>
-            <div class="space-y-3 border-t md:border-t-0 md:border-l border-slate-200 pt-5 md:pt-0 md:pl-8">
+            <div class="space-y-3 border-t md:border-t-0 md:border-l border-mineral-line pt-5 md:pt-0 md:pl-8">
               <p class="text-xs font-medium text-seaglass">PeopleForBikes Collaboration</p>
               <h3 class="font-display text-2xl font-bold text-slate-900">
                 Building the Future of Biking in Los Angeles
@@ -321,7 +321,7 @@ interface TowerSlot {
             </div>
           </div>
         } @else {
-          <div class="bg-white rounded-2xl border border-slate-200 p-7 sm:p-9 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-2xl border border-mineral-line p-7 sm:p-9 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="space-y-3">
               <p class="text-xs font-medium text-ocean">High-Density Streetscapes</p>
               <h3 class="font-display text-2xl font-bold text-slate-900">
@@ -333,7 +333,7 @@ interface TowerSlot {
                 clutter.
               </p>
             </div>
-            <div class="space-y-3 border-t md:border-t-0 md:border-l border-slate-200 pt-5 md:pt-0 md:pl-8">
+            <div class="space-y-3 border-t md:border-t-0 md:border-l border-mineral-line pt-5 md:pt-0 md:pl-8">
               <p class="text-xs font-medium text-seaglass">Storefront Vitality</p>
               <h3 class="font-display text-2xl font-bold text-slate-900">
                 Neighborhood Shops & Café Perks
